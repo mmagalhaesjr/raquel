@@ -53,7 +53,7 @@ button{
     font-size: 2rem;
     cursor: pointer;
     &:hover{
-         background-color: #efff0fbf;
+         background-color: #2c3d9cff;
     }
 }
    

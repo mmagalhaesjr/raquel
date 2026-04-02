@@ -12,13 +12,18 @@ export default function Video() {
 
             <section id="cxvideos">
 
-              
+                <h1>Aulas</h1>
+
+                <div id="grupamentoVideo">
                     {ListaVideos.map((obj, id) => (
                         <div id="video" key={id} onClick={() => setVideoAtual(obj.video)}>
-                           <h2>{obj.titulo}</h2> 
+                            <h2>{obj.titulo}</h2>
                         </div>
                     ))}
-             
+
+                </div>
+
+
 
             </section>
 
