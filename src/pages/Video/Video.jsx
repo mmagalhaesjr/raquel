@@ -1,12 +1,38 @@
 import { StyledVideo } from "./styled";
+import { ListaVideos } from "../../components/ListaVideos/ListaVideos";
+import { useState } from "react";
 
 
 export default function Video() {
 
+    const [videoAtual, setVideoAtual] = useState(ListaVideos[0].video);
 
     return (
-        <StyledVideo>
-          <iframe title="vimeo-player" src="https://player.vimeo.com/video/403543324?h=36b46ea1dd" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+        <StyledVideo >
+
+            <section id="cxvideos">
+
+              
+                    {ListaVideos.map((obj, id) => (
+                        <div id="video" key={id} onClick={() => setVideoAtual(obj.video)}>
+                           <h2>{obj.titulo}</h2> 
+                        </div>
+                    ))}
+             
+
+            </section>
+
+            <section id="cxIframe">
+                <iframe
+                    width="80%"
+                    height="80%"
+                    src={videoAtual}
+                    title="video"
+                    frameBorder="0"
+                    allowFullScreen
+                ></iframe>
+            </section>
+
         </StyledVideo>
     )
 }

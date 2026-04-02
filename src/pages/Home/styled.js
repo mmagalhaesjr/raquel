@@ -14,6 +14,7 @@ export const StyledHome = styled.main`
     form{
         width: 400px;
         height: 200px;
+        
 
         display: flex;
         flex-direction: column;
