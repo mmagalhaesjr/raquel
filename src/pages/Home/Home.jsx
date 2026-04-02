@@ -30,6 +30,8 @@ export default function Home() {
           
 
             <form onSubmit={handleSubmit}>
+                    <h2>Área do Aluno</h2>
+
                 <input
                     name="nome"
                     className="inputNome"

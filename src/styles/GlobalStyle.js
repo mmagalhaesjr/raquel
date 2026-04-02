@@ -36,19 +36,6 @@ const GlobalStyle = createGlobalStyle`
         display: block;
     }
 
-/* @font-face {
-    font-family: 'marjorieMediu';
-    src: url('fonts/NeueHaasDisplayMediu.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'marjorieLigth';
-    src: url('fonts/NeueHaasDisplayLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 
 
@@ -59,7 +46,10 @@ const GlobalStyle = createGlobalStyle`
         font-optical-sizing: auto;
         /* border: solid 5px #080808; */
         overflow: hidden;
-        font-family: "Inter", sans-serif;
+        font-family: "Raleway", sans-serif;
+         font-optical-sizing: auto;
+        font-style: normal;
+      
 
     }
 

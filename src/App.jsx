@@ -11,7 +11,7 @@ function App() {
         <Routes>
 
           <Route path="/" exact element={<Home />} />
-            <Route path="/video" exact element={<Video />} />
+          <Route path="/video" exact element={<Video />} />
 
          
         </Routes>

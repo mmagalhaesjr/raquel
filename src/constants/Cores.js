@@ -1,5 +1,6 @@
 
-export const roxo = "#6805F2";
+export const fundo = "#252525";
+export const fundoVideo = "#fffefe";
 
 
 
