@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { fundo } from '../../constants/Cores';
+import { fundo } from "../../constants/Cores";
 
-export const StyledHome = styled.main`
+export const StyledSobre = styled.section`
   width: 100%;
   min-height: 100vh;
   background-color: ${fundo};
@@ -17,6 +17,7 @@ export const StyledHome = styled.main`
 
   #cxTexto {
     width: 70%;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -24,17 +25,20 @@ export const StyledHome = styled.main`
     border: solid 2px red;
   }
   #texto{
-       border: solid 2px blue;
+    width: 90%;
+    height: 90%;
+    border: solid 2px blue;
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
-    font-size: 1.2rem;
-    max-width: 500px;
+    font-size: 1.5rem;
+    margin-top: 5%;
   }
 
   #fotoRaquel {
@@ -68,4 +72,5 @@ export const StyledHome = styled.main`
       font-size: 1rem;
     }
   }
-`;
+
+`

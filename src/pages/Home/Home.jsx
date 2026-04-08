@@ -1,59 +1,38 @@
-import { useState } from "react";
-import { StyledHome } from "./styled";
-import { ListaLogin } from '../../components/ListaLogin/ListaLogin';
-import { useNavigate } from "react-router-dom";
+import Header from '../../components/Header/Header';
+import { StyledHome } from './styled';
+import raquel from "../../assets/raquel.png"
+
+
 
 export default function Home() {
-    const [cpf, setCpf] = useState("");
-    const [nome, setNome] = useState("");
-    const navigate = useNavigate();
-
-
-    function handleSubmit(e) {
-        e.preventDefault();
-
-        // limpa CPF (remove pontos e traços)
-        const cpfLimpo = cpf.replace(/\D/g, "");
-    const usuario = ListaLogin.find(user => user.cpf === cpfLimpo);
-
-        if (!usuario) {
-            alert("CPF não autorizado!");
-            return;
-        }
-
-        alert(`Bem Vindo ${nome}`);
-        navigate("/video");
-    }
-
     return (
         <StyledHome>
-          
 
-            <form onSubmit={handleSubmit}>
-                    <h2>Área do Aluno</h2>
+            <Header />
 
-                <input
-                    name="nome"
-                    className="inputNome"
-                    type="text"
-                    placeholder="Nome"
-                      value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                    required
-                />
+            <section id='container'>
 
-                <input
-                    name="cpf"
-                    className="inputCpf"
-                    type="text"
-                    placeholder="CPF"
-                    value={cpf}
-                    onChange={(e) => setCpf(e.target.value)}
-                    required
-                />
+                <div id='cxTexto'>
+                    <div id='texto'>
+                        <h1>Raquel Timoteo</h1>
+                        <p>
+                            Desnaturalizar violências, ampliar o possível:
+                            Onde há diversidade, há transformação.
+                        </p>
+                    </div>
 
-                <button type="submit">Enviar</button>
-            </form>
+                </div>
+
+
+
+                <img id='fotoRaquel' src={raquel} alt="" />
+
+
+
+
+            </section>
+
+
         </StyledHome>
-    );
+    )
 }
