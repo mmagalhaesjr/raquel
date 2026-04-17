@@ -8,7 +8,9 @@ export const StyledTreinamentos = styled.section`
 
   #container {
     width: 100%;
-    min-height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
+    position: relative;
+    top:100px;
     padding: 0 8%;
     
     display: flex;

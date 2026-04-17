@@ -28,7 +28,7 @@ export default function Palestras() {
             <img src={img2} alt="" />
             <h3>Etarismo e capacitismo</h3>
             <p>
-           A proposta deste tema é ampliar o olhar sobre idade e deficiência no contexto profissional, questionando preconceitos e estigmas que limitam oportunidades. A palestra aborda como são formados alguns preconceitos e como eles influenciam percepções sobre capacidade, produtividade e pertencimento, incentivando uma cultura mais inclusiva e que valorize a diversidade em todas as suas formas.
+              A proposta deste tema é ampliar o olhar sobre idade e deficiência no contexto profissional, questionando preconceitos e estigmas que limitam oportunidades. A palestra aborda como são formados alguns preconceitos e como eles influenciam percepções sobre capacidade, produtividade e pertencimento, incentivando uma cultura mais inclusiva e que valorize a diversidade em todas as suas formas.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Palestras() {
             <img src={img3} alt="" />
             <h3>Relações étnico-raciais</h3>
             <p>
-             Um espaço de análise e conscientização sobre o racismo estrutural e o papel da branquitude na perpetuação das desigualdades racial no Brasil, dentro e fora dos espaços de trabalho. A palestra discute como os vieses inconscientes de raça se formam e impactam decisões e comportamentos, além de provocar reflexões sobre a responsabilidade individual e coletiva na construção de práticas antirracistas nas organizações.
+              Um espaço de análise e conscientização sobre o racismo estrutural e o papel da branquitude na perpetuação das desigualdades racial no Brasil, dentro e fora dos espaços de trabalho. A palestra discute como os vieses inconscientes de raça se formam e impactam decisões e comportamentos, além de provocar reflexões sobre a responsabilidade individual e coletiva na construção de práticas antirracistas nas organizações.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export default function Palestras() {
             <img src={img4} alt="" />
             <h3>Assédios no ambiente de trabalho</h3>
             <p>
-            O tema trata das diversas formas de assédio no ambiente profissional, unindo teoria e prática para identificação e enfrentamento dessas situações. Com foco em parâmetros legais, conceitos técnicos  e responsabilidade coletiva, as palestras sobre esse tema buscam oferecer repertório teórico-prático para o combate de violências  e a construção de ambientes seguros, respeitosos e livres de assédios.
+              O tema trata das diversas formas de assédio no ambiente profissional, unindo teoria e prática para identificação e enfrentamento dessas situações. Com foco em parâmetros legais, conceitos técnicos  e responsabilidade coletiva, as palestras sobre esse tema buscam oferecer repertório teórico-prático para o combate de violências  e a construção de ambientes seguros, respeitosos e livres de assédios.
 
             </p>
           </div>

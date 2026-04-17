@@ -4,6 +4,7 @@ import raquel from "../../assets/raquel.png"
 
 
 
+
 export default function Home() {
     return (
         <StyledHome>
@@ -14,7 +15,7 @@ export default function Home() {
 
                 <div id='cxTexto'>
                     <div id='texto'>
-                        <h1>Raquel Timoteo</h1>
+                        <h2>Raquel Timoteo</h2>
                         <p>
                             Desnaturalizar violências, ampliar o possível:
                             Onde há diversidade, há transformação.
@@ -23,9 +24,10 @@ export default function Home() {
 
                 </div>
 
+                <div id='cxImagem'>
+                    <img id='fotoRaquel' src={raquel} alt="" />
+                </div>
 
-
-                <img id='fotoRaquel' src={raquel} alt="" />
 
 
 

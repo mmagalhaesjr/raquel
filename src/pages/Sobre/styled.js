@@ -8,11 +8,15 @@ export const StyledSobre = styled.section`
 
   #container {
     width: 100%;
-    min-height: calc(100vh - 80px); 
+    height: calc(100vh - 100px); 
+    position: relative;
+    top:100px;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+      border: solid 2px blue;
   }
 
   #cxTexto {
@@ -30,7 +34,7 @@ export const StyledSobre = styled.section`
     border: solid 2px blue;
   }
 
-  h1 {
+  h2 {
     font-size: 3rem;
     margin-bottom: 10px;
     text-align: center;

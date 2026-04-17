@@ -12,7 +12,7 @@ export default function Sobre() {
 
                 <div id='cxTexto'>
                     <div id='texto'>
-                        <h1>QUEM É RAQUEL TIMOTEO?</h1>
+                        <h2>QUEM É RAQUEL TIMOTEO?</h2>
                         <p>
                             Graduada em Serviço Social pela Universidade Federal de Juiz de Fora (UFJF), a professora possui sólida formação acadêmica, com pós-graduação em Diversidade, Etnicidade e Cultura, além de especialização em Psicologia Organizacional. É autora do capítulo IV do livro “A dimensão técnico-operativa no Serviço Social: desafios contemporâneos”, intitulado “Serviço Social, projeto ético-político e cultura: as intersecções na intervenção do assistente social”, publicado pela editora UFJF.
                         </p>

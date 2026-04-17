@@ -8,15 +8,18 @@ export const StyledHome = styled.main`
 
   #container {
     width: 100%;
-    min-height: calc(100vh - 80px); 
+    height: calc(100vh - 100px); 
+    position: relative;
+    top:100px;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: solid 5px red;
   }
 
   #cxTexto {
-    width: 70%;
+    width: 60%;
 
     display: flex;
     align-items: center;
@@ -27,8 +30,8 @@ export const StyledHome = styled.main`
        border: solid 2px blue;
   }
 
-  h1 {
-    font-size: 5rem;
+  h2 {
+    font-size: clamp(2rem, 5vw, 5rem);
     margin-bottom: 10px;
   }
 
@@ -37,14 +40,21 @@ export const StyledHome = styled.main`
     max-width: 500px;
   }
 
+  #cxImagem{
+    width: 40%;
+    height: 100%;
+    border: solid 2px blue;
+  }
+
   #fotoRaquel {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
 
-  @media (max-width: 768px) {
+
+  @media (max-width: 800px) {
     #container {
       flex-direction: column;
       text-align: center;

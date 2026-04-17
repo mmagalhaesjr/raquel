@@ -5,19 +5,21 @@ export const StyledPalestras = styled.section`
   width: 100%;
   min-height: 100vh;
   background-color: ${fundo};
+  
 
   #container {
     width: 100%;
-    min-height: calc(100vh - 80px);
-    padding: 0 8%;
-    
+    height: calc(100vh - 100px);
+    position: relative;
+    top: 100px;
+
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
     gap: 40px;
 
-      border: solid 2px blue;
+      border: solid 5px blue;
   }
 
   h2 {
