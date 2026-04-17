@@ -4,7 +4,7 @@ import MenuMobile from "../MenuMobile/MenuMobile";
 import { useState, useEffect } from "react";
 
 export default function Header() {
- const [scrollY, setScrollY] = useState(0);
+    const [scrollY, setScrollY] = useState(0);
     const [mobile, setMobile] = useState('fechado');
 
     const handleScroll = () => {
@@ -17,7 +17,7 @@ export default function Header() {
         };
     }, []);
 
-      function menuMobile() {
+    function menuMobile() {
         if (mobile == 'fechado') {
             setMobile('aberto')
         } else if (mobile == 'aberto') {
@@ -25,7 +25,7 @@ export default function Header() {
         }
     }
 
-   useEffect(() => {
+    useEffect(() => {
         if (mobile === 'aberto') {
             document.body.style.overflow = 'hidden'; // Bloqueia a rolagem
         } else {
@@ -47,6 +47,14 @@ export default function Header() {
             />
 
             <StyledHeader className={scrollY > 100 ? 'rolagem' : ''} mobile={mobile}>
+                
+                <button onClick={menuMobile}>
+                    <span className='linha'></span>
+                    <span className='linha'></span>
+                    <span className='linha'></span>
+                </button>
+
+
                 <Link to="/"><h1>Home</h1></Link>
                 <Link to="/sobre"><h1>SOBRE</h1></Link>
                 <Link to="/palestras"><h1>PALESTRAS</h1></Link>
@@ -54,11 +62,7 @@ export default function Header() {
                 <Link to="/contato"><h1>CONTATO</h1></Link>
                 <Link to="/aluno"><h1>ÁREA DO ALUNO</h1></Link>
 
-                <button onClick={menuMobile}>
-                    <span className='linha'></span>
-                    <span className='linha'></span>
-                    <span className='linha'></span>
-                </button>
+
             </StyledHeader>
         </>
 
