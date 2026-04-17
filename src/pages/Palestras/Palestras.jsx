@@ -14,7 +14,7 @@ export default function Palestras() {
       <section id="container">
         <h2>TEMAS ABORDADOS</h2>
 
-        <div id="cards">
+        <div id="cxCards">
 
           <div className="card">
             <img src={img1} alt="" />

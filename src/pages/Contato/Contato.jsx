@@ -22,7 +22,7 @@ export default function Contato() {
             <label>MENSAGEM</label>
             <textarea placeholder="Digite sua mensagem"></textarea>
 
-            <button type="submit">ENVIAR</button>
+            <button id="botao" type="submit">ENVIAR</button>
           </form>
         </div>
 

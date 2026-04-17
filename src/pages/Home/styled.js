@@ -54,28 +54,51 @@ export const StyledHome = styled.main`
 
 
 
-  @media (max-width: 800px) {
-    #container {
+  @media (max-width: 900px) {
+  #container {
       flex-direction: column;
       text-align: center;
-    }
+  }
 
-    #texto {
-      width: 100%;
-      align-items: center;
-    }
+   
+  #cxTexto {
+    width: 90%;
+    height: 40%;
 
-    #fotoRaquel {
-      width: 80%;
-      margin-top: 20px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+  }
+  #texto {
+     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     
     }
 
     h1 {
       font-size: 2rem;
+      
     }
 
     p {
       font-size: 1rem;
     }
+
+  #cxImagem{
+    width: 90%;
+    height: 70%;
+    border: solid 2px blue;
+  }
+
+  #fotoRaquel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   }
 `;

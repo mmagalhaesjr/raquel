@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { fundo } from "../../constants/Cores";
+import { Star } from 'lucide-react';
 
 export const StyledPalestras = styled.section`
   width: 100%;
@@ -29,8 +30,8 @@ export const StyledPalestras = styled.section`
     color: #444;
   }
 
-  #cards {
-    width: 100%;
+  #cxCards {
+    width: 80%;
     height: auto;
 
     display: grid;
@@ -65,15 +66,42 @@ export const StyledPalestras = styled.section`
 
   /* 📱 RESPONSIVO */
   @media (max-width: 1024px) {
-    #cards {
+    #cxCards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 600px) {
-    #cards {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 800px) {
+    #container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    top: 100px;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+   justify-content: flex-start;
+
+    gap: 10px;
+    overflow: scroll;
+  }
+
+  h2{
+    margin-top:5%;
+  }
+
+  #cxCards {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-template-columns: 1fr;
+   
+    
+  }
 
     .card img {
       height: 180px;

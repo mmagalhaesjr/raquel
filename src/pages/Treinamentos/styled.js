@@ -18,6 +18,7 @@ export const StyledTreinamentos = styled.section`
     align-items: center;
     justify-content: center;
     gap: 40px;
+    
 
       border: solid 2px blue;
   }
@@ -102,7 +103,24 @@ export const StyledTreinamentos = styled.section`
   }
 
  
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+  #container {
+  
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+   justify-content: flex-start;
+    gap: 40px;
+
+    overflow: scroll;
+
+  }
+
+  h2{
+    text-align: center;
+    margin-top: 20px;
+  }
 
     #beneficios {
       flex-direction: column;
@@ -111,6 +129,10 @@ export const StyledTreinamentos = styled.section`
 
     .item {
       width: 100%;
+    }
+
+    #depoimentos{
+      margin-bottom: 5%;
     }
 
     #slider {

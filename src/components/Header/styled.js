@@ -22,6 +22,7 @@ h1{
 }
 
   button{
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -40,21 +41,27 @@ h1{
     transition:.5s;
  }
  .linha:nth-child(1){
-    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(15px) rotate(-45deg)' : 'rotate(0)' )};
+    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(15px) rotate(-45deg)' : 'rotate(0)')};
     transition: 1s;
    }
    .linha:nth-child(2){
-    display:${(props) => (props.mobile === 'aberto' ? 'none' : 'block' )};
+    display:${(props) => (props.mobile === 'aberto' ? 'none' : 'block')};
     
     }
     .linha:nth-child(3){
-    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(0px) rotate(45deg)' : 'rotate(0)' )};
+    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(0px) rotate(45deg)' : 'rotate(0)')};
     transition: 1s;
 }
 
 
-@media (max-width:800px) {
+@media (max-width:900px) {
     h1{display:none}
+
+
+  button{
+    display: block;
+  
+  }
 }
 
 `

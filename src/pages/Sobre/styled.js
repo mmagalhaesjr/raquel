@@ -41,40 +41,59 @@ export const StyledSobre = styled.section`
   }
 
   p {
-    font-size: 1.5rem;
+   font-size: clamp(.7rem, 2.5vw, 1.5rem);
     margin-top: 5%;
+    line-height: 1.5;
   }
 
   #fotoRaquel {
-    width: auto;
-    height: auto;
+    width: 40%;
+    height: 100%;
     object-fit: cover;
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     #container {
       flex-direction: column;
       text-align: center;
     }
 
-    #texto {
-      width: 100%;
-      align-items: center;
-    }
+    #cxTexto {
+    width: 100%;
+    height: 70vh;
 
-    #fotoRaquel {
-      width: 80%;
-      margin-top: 20px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px red;
+  }
+  #texto{
+    width: 95%;
+    height: 95%;
+    border: solid 2px blue;
 
-    h1 {
-      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+     h2 {
+      font-size: 1.5rem;
     }
 
     p {
-      font-size: 1rem;
+      font-size: .7rem;
+      margin-top: 0%;
+      line-height: 1.;
     }
+    #fotoRaquel {
+        width: 50%;
+        height: 30%;
+        object-fit: cover;
+    }
+
+ 
   }
 
 `

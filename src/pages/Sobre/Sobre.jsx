@@ -26,7 +26,7 @@ export default function Sobre() {
 
                 </div>
 
-
+                
 
                 <img id='fotoRaquel' src={raquel} alt="" />
 

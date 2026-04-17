@@ -17,6 +17,7 @@ export const StyledContato = styled.section`
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    padding: 5%;
     
     border: solid 2px blue;
   }
@@ -51,7 +52,7 @@ export const StyledContato = styled.section`
     resize: none;
   }
 
-  button {
+  #botao {
     margin-top: 10px;
     padding: 12px;
     border: none;
@@ -60,7 +61,7 @@ export const StyledContato = styled.section`
     transition: 0.3s;
   }
 
-  button:hover {
+  #botao:hover {
     background: #7a7a7a;
   }
 
@@ -84,10 +85,16 @@ export const StyledContato = styled.section`
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     #container {
-      flex-direction: column;
-      text-align: center;
+   
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 4%;
+        flex-direction: column;
+        text-align: center;
     }
 
     #formArea {
