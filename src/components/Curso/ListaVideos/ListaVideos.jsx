@@ -1,33 +1,31 @@
-export const ListaVideos = [
-    {
-    id: 1,
-    titulo: "Aula 1",
-    video: "https://www.youtube.com/embed/A_HjMIjzyMU?si=gKl0zO-RNjeU8FLh" 
+
+export const modulos = [
+  {
+    nome: "Módulo 1",
+    aulas: [
+      { titulo: "Aula 1", video: "https://www.youtube.com/embed/Fc7XWW_Ehb8?si=d7OVN30mIysQb7ba" },
+      { titulo: "Aula 2", video: "https://www.youtube.com/embed/xAWDqdpOlu8?si=K9TLnjYaQi-9-coi" }
+    ]
   },
   {
-    id: 2,
-    titulo: "Aula 2",
-    video: "https://www.youtube.com/embed/jFWnVdsSgxs?si=Ovq-AjHaOlKvsZqv" 
+    nome: "Módulo 2",
+    aulas: [
+     { titulo: "Aula 3", video: "https://www.youtube.com/embed/Fc7XWW_Ehb8?si=d7OVN30mIysQb7ba" },
+      { titulo: "Aula 4", video: "https://www.youtube.com/embed/xAWDqdpOlu8?si=K9TLnjYaQi-9-coi" }
+    ]
   },
   {
-    id: 3,
-    titulo: "Aula 3",
-    video: "https://www.youtube.com/embed/BXlYuaycRbU?si=U66-_VJWlvZRO713" 
+    nome: "Módulo 3",
+    aulas: [
+   { titulo: "Aula 5", video: "https://www.youtube.com/embed/Fc7XWW_Ehb8?si=d7OVN30mIysQb7ba" },
+      { titulo: "Aula 6", video: "https://www.youtube.com/embed/xAWDqdpOlu8?si=K9TLnjYaQi-9-coi" }
+    ]
   },
   {
-    id: 4,
-    titulo: "Aula 4",
-    video: "https://www.youtube.com/embed/UsZNj9srzR8?si=xEN8KoZXrds4tAP0" 
-  },
-  {
-    id: 5,
-    titulo: "Aula 5",
-    video: "https://www.youtube.com/embed/mFl8nzZuExE?si=x14ROaD-PLQgZdMl" 
-  },
-  {
-    id: 6,
-    titulo: "Aula 6",
-    video: "https://www.youtube.com/embed/CaTFPPlSXf0?si=yYkwveutFMvLEBXF" 
+    nome: "Módulo 4",
+    aulas: [
+    { titulo: "Aula 7", video: "https://www.youtube.com/embed/Fc7XWW_Ehb8?si=d7OVN30mIysQb7ba" },
+      
+    ]
   }
-   
-]
+];

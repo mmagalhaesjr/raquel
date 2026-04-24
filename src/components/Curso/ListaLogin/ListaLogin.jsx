@@ -1,4 +1,7 @@
-export const ListaLogin = [
-    {id:1, nome: "Esther", cpf:'12345678'},
-   
-]
+
+export const cpfsAutorizados = [
+  "12345678900",
+  "98765432100",
+  "11122233344",
+  "12345678910"
+];

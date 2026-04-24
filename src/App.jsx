@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-import Loguin from './pages/Curso/Loguin/Loguin';
+
 import Home from './pages/Home/Home';
 import Sobre from './pages/Sobre/Sobre';
 import Contato from './pages/Contato/Contato';
 import Palestras from './pages/Palestras/Palestras';
 import Treinamentos from './pages/Treinamentos/Treinamentos';
+import Curso from './pages/Curso/Curso';
 
 function App() {
 
@@ -21,8 +22,10 @@ function App() {
            <Route path="/contato" exact element={<Contato />} />
             <Route path="/palestras" exact element={<Palestras />} />
              <Route path="/treinamento" exact element={<Treinamentos />} />
+              <Route path="/curso" exact element={<Curso />} />
+             
           
-             <Route path="/login" exact element={<Loguin />} />
+             
 
          
         </Routes>
