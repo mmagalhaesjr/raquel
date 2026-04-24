@@ -92,7 +92,9 @@ export const StyledHome = styled.main`
   #cxImagem{
     width: 90%;
     height: 70%;
+   margin-bottom: 20%;
     //border: solid 2px blue;
+
   }
 
   #fotoRaquel {

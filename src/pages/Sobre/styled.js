@@ -99,9 +99,11 @@ export const StyledSobre = styled.section`
       line-height: 1.;
     }
     #fotoRaquel {
-        width: 50%;
-        height: 30%;
+        width: auto;
+        height: 35%;
         object-fit: cover;
+        margin-bottom: 20%;
+        //border: solid 2px red;
     }
 
  

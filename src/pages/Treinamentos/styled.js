@@ -144,11 +144,13 @@ export const StyledTreinamentos = styled.section`
 
     #depoimentos{
       margin-bottom: 5%;
+      margin-bottom: 20%;
     }
 
     #slider {
       flex-direction: column;
       gap: 20px;
+      
     }
   }
 `;

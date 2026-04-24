@@ -95,6 +95,7 @@ export const StyledPalestras = styled.section`
 
     gap: 10px;
     overflow: scroll;
+   
   }
 
   h2{
@@ -109,6 +110,7 @@ export const StyledPalestras = styled.section`
     flex-direction: column;
     gap: 20px;
     grid-template-columns: 1fr;
+     margin-bottom: 20%;
    
     
   }

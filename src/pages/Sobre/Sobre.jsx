@@ -19,7 +19,9 @@ export default function Sobre() {
 
             <section id='container'>
 
-                <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+               {/*  <PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */} 
+
+              
 
                 <div id='cxTexto'>
                     <div id='texto'>

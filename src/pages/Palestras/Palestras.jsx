@@ -23,7 +23,7 @@ export default function Palestras() {
 
       <section id="container">
 
-        <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+       {/*<PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */} 
 
         <h2>TEMAS ABORDADOS</h2>
 

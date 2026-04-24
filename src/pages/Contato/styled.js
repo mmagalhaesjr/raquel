@@ -114,6 +114,7 @@ export const StyledContato = styled.section`
     #frase {
       width: 100%;
       margin-top: 30px;
+      margin-bottom: 5%;
     }
 
     #frase span {

@@ -7,11 +7,11 @@ import { MessageSquare, Users, Award, CheckCircle, ArrowLeft, ArrowRight } from 
 
 export default function Treinamentos() {
 
-      const navigate = useNavigate();
+    const navigate = useNavigate();
 
-      function Navegar(){
-    navigate("/");
-  }
+    function Navegar() {
+        navigate("/");
+    }
 
     return (
         <StyledTreinamentos>
@@ -20,7 +20,8 @@ export default function Treinamentos() {
 
             <section id="container">
 
-                 <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+                {/*  <PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */}
+
 
                 <h2>
                     Quando o treinamento sobre diversidade é parte da estratégia de negócios:

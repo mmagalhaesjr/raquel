@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyledCurso = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, #111827, #374151);
+  background: linear-gradient(135deg, #000000, #25282e);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 40%;
+  width: 90%;
   padding: 10px;
   border: none;
   border-radius: 8px;
