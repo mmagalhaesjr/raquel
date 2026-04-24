@@ -77,12 +77,12 @@ export const StyledSobre = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px red;
+    //border: solid 2px red;
   }
   #texto{
     width: 95%;
     height: 95%;
-    border: solid 2px blue;
+    //border: solid 2px blue;
 
       display: flex;
       flex-direction: column;

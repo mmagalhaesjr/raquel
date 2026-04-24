@@ -34,6 +34,7 @@ export const StyledTreinamentos = styled.section`
 
 
   h2 {
+  padding-top: 50px;
   
   }
 

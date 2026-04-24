@@ -17,7 +17,7 @@ export default function MenuMobile({ mobile }) {
                 <Link to={"/palestras"}>PALESTRAS</Link>
                 <Link to={"/treinamento"}>TREINAMENTOS</Link>
                 <Link to={"/contato"}>CONTATO</Link>
-                  <Link to={"/aluno"}>ÁREA DO ALUNO</Link>
+                  <Link to={"/curso"}>ÁREA DO ALUNO</Link>
             </nav>
         </StyledMenuMobile>
     );
