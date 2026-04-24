@@ -1,15 +1,26 @@
 import Header from "../../components/Header/Header";
 import { StyledTreinamentos } from "./styled";
+import { useNavigate } from "react-router-dom";
+import { PiKeyReturnLight } from "react-icons/pi";
 
 import { MessageSquare, Users, Award, CheckCircle, ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Treinamentos() {
+
+      const navigate = useNavigate();
+
+      function Navegar(){
+    navigate("/");
+  }
+
     return (
         <StyledTreinamentos>
 
             <Header />
 
             <section id="container">
+
+                 <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
 
                 <h2>
                     Quando o treinamento sobre diversidade é parte da estratégia de negócios:

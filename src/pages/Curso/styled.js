@@ -5,8 +5,19 @@ export const StyledCurso = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #111827, #374151);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  #icone{
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
 
   @media (max-width: 768px) {
     align-items: center;

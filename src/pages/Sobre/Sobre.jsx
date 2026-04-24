@@ -1,14 +1,25 @@
 import Header from "../../components/Header/Header";
 import { StyledSobre } from "./styled";
 import raquel from '../../assets/raquel.png';
+import { PiKeyReturnLight } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 export default function Sobre() {
+    const navigate = useNavigate();
+
+
+    function Navegar() {
+        navigate("/");
+    }
+
     return (
         <StyledSobre>
 
             <Header />
 
             <section id='container'>
+
+                <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
 
                 <div id='cxTexto'>
                     <div id='texto'>
@@ -26,7 +37,7 @@ export default function Sobre() {
 
                 </div>
 
-                
+
 
                 <img id='fotoRaquel' src={raquel} alt="" />
 

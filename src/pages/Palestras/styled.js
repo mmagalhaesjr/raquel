@@ -20,8 +20,17 @@ export const StyledPalestras = styled.section`
     justify-content: center;
     gap: 40px;
 
-      border: solid 5px blue;
+      //border: solid 5px blue;
   }
+   #icone{
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
 
   h2 {
     text-align: center;
@@ -37,7 +46,7 @@ export const StyledPalestras = styled.section`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    border: solid 2px red;
+    //border: solid 2px red;
   }
 
   .card {
@@ -62,6 +71,7 @@ export const StyledPalestras = styled.section`
     font-size: 0.75rem;
     color: #555;
     line-height: 1.4;
+     text-align: justify;
   }
 
   /* 📱 RESPONSIVO */

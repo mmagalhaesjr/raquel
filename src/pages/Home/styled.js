@@ -15,7 +15,7 @@ export const StyledHome = styled.main`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: solid 5px red;
+    //border: solid 5px red;
   }
 
   #cxTexto {
@@ -24,10 +24,10 @@ export const StyledHome = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px red;
+    //border: solid 2px red;
   }
   #texto{
-       border: solid 2px blue;
+      // border: solid 2px blue;
   }
 
   h2 {
@@ -43,7 +43,7 @@ export const StyledHome = styled.main`
   #cxImagem{
     width: 40%;
     height: 100%;
-    border: solid 2px blue;
+    //border: solid 2px blue;
   }
 
   #fotoRaquel {

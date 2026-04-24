@@ -20,8 +20,18 @@ export const StyledTreinamentos = styled.section`
     gap: 40px;
     
 
-      border: solid 2px blue;
+      //border: solid 2px blue;
   }
+
+   #icone{
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
 
   h2 {
   

@@ -5,13 +5,26 @@ import img1 from "../../assets/palestras/img1.png";
 import img2 from "../../assets/palestras/img2.png";
 import img3 from "../../assets/palestras/img3.png";
 import img4 from "../../assets/palestras/img4.png";
+import { useNavigate } from "react-router-dom";
+import { PiKeyReturnLight } from "react-icons/pi";
 
 export default function Palestras() {
+
+   const navigate = useNavigate();
+
+  function Navegar() {
+    navigate("/");
+  }
+
+
   return (
     <StyledPalestras>
       <Header />
 
       <section id="container">
+
+        <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+
         <h2>TEMAS ABORDADOS</h2>
 
         <div id="cxCards">

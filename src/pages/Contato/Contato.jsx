@@ -1,12 +1,24 @@
 import { StyledContato } from "./styled";
 import Header from '../../components/Header/Header';
+import { PiKeyReturnLight } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 export default function Contato() {
+   const navigate = useNavigate();
+
+     function Navegar(){
+    navigate("/");
+  }
+
+
   return (
     <StyledContato>
+    
       <Header />
 
       <section id="container">
+
+           <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
 
         <div id="formArea">
           <form>

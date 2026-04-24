@@ -2,6 +2,11 @@ import { useState } from "react";
 import  {cpfsAutorizados}  from "../../components/Curso/ListaLogin/ListaLogin";
 import  {modulos} from "../../components/Curso/ListaVideos/ListaVideos";
 import { AulaButton, Button, Card, Chevron, Input, Layout, ModuleHeader, Sidebar, StyledCurso, Title, VideoArea } from './styled';
+import { useNavigate } from "react-router-dom";
+
+
+import { PiKeyReturnLight } from "react-icons/pi";
+
 
 export default function Curso(){
 
@@ -10,6 +15,7 @@ export default function Curso(){
   const [cpf, setCpf] = useState("");
   const [aulaSelecionada, setAulaSelecionada] = useState(null);
   const [moduloAberto, setModuloAberto] = useState(null);
+  const navigate = useNavigate();
 
     function formatarCPF(valor) {
   const numeros = valor.replace(/\D/g, "").slice(0, 11);
@@ -37,13 +43,24 @@ export default function Curso(){
     setLogado(true);
   }
 
+  function Navegar(){
+    navigate("/");
+  }
+
   
 
     return(
         <>
+      
+      
+
       {!logado ? (
         <StyledCurso>
+
+            <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+        
           <Card>
+          
             <Title>Login do Curso</Title>
 
             <Input

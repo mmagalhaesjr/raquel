@@ -19,8 +19,18 @@ export const StyledContato = styled.section`
     gap: 40px;
     padding: 5%;
     
-    border: solid 2px blue;
+    //border: solid 2px blue;
   }
+
+   #icone{
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
 
 
   #formArea {

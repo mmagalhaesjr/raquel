@@ -16,8 +16,18 @@ export const StyledSobre = styled.section`
     align-items: center;
     justify-content: space-between;
 
-      border: solid 2px blue;
+      //border: solid 2px blue;
   }
+
+   #icone{
+    color: #ffffff;
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
 
   #cxTexto {
     width: 70%;
@@ -26,12 +36,12 @@ export const StyledSobre = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px red;
+    //border: solid 2px red;
   }
   #texto{
     width: 90%;
     height: 90%;
-    border: solid 2px blue;
+    //border: solid 2px blue;
   }
 
   h2 {
@@ -44,6 +54,7 @@ export const StyledSobre = styled.section`
    font-size: clamp(.7rem, 2.5vw, 1.5rem);
     margin-top: 5%;
     line-height: 1.5;
+     text-align: justify;
   }
 
   #fotoRaquel {
