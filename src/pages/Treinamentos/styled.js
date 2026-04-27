@@ -16,11 +16,13 @@ export const StyledTreinamentos = styled.section`
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-evenly;
+  
+    
+   
     
 
-      //border: solid 2px blue;
+    
   }
 
    #icone{
@@ -33,17 +35,14 @@ export const StyledTreinamentos = styled.section`
   }
 
 
-  h2 {
-  padding-top: 50px;
-  
-  }
-
-
   #beneficios {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 40px;
+    gap: 5%;
+    margin-bottom: 0%;
+    text-align: center;
+    //border: solid 2px red;
+   
   }
 
   .item {
@@ -53,32 +52,42 @@ export const StyledTreinamentos = styled.section`
     align-items: center;
     gap: 10px;
     color: #333;
+      
+   
   }
 
   .item p {
-    font-size: 0.9rem;
+    font-size:.8rem;
+   // border: solid 2px red;
+  
   }
 
-  /* DESCRIÇÃO */
+ 
   #descricao {
-    max-width: 800px;
+    width: 95%;
+    text-align: center;
     margin: 0 auto;
     color: #555;
     font-size: 0.9rem;
     line-height: 1.6;
+    //border: solid 2px red;
+  
   }
 
-  /* DEPOIMENTOS */
   #depoimentos {
     width: 100%;
+    height: 200px;
     background: #6b6b6b;
     color: white;
-    padding: 50px 8%;
+    padding: 40px 8%;
     text-align: center;
+
+    //border: solid 2px red;
+
   }
 
   #depoimentos h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
   }
 
@@ -116,7 +125,8 @@ export const StyledTreinamentos = styled.section`
  
   @media (max-width: 900px) {
   #container {
-  
+  height: calc(100dvh - 50px); 
+  top:50px;
 
     display: flex;
     flex-direction:column;
@@ -141,8 +151,19 @@ export const StyledTreinamentos = styled.section`
     .item {
       width: 100%;
     }
+     #descricao {
+    width: 100%;
+    margin: 0 auto;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 10%;
+
+  }
 
     #depoimentos{
+      width: 100%;
+      height: auto;
       margin-bottom: 5%;
       margin-bottom: 20%;
     }

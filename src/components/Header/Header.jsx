@@ -55,7 +55,7 @@ export default function Header() {
                 </button>
 
 
-                <Link to="/"><h1>Home</h1></Link>
+                <Link to="/"><h1>HOME</h1></Link>
                 <Link to="/sobre"><h1>SOBRE</h1></Link>
                 <Link to="/palestras"><h1>PALESTRAS</h1></Link>
                 <Link to="/treinamento"><h1>TREINAMENTOS</h1></Link>

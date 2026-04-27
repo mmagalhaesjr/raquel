@@ -27,21 +27,21 @@ h1{
     border: none;
     cursor: pointer;
     z-index: 9;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
  .linha{
     position: relative;
-    width: 40px;
-    height: 5px;
+    width: 30px;
+    height: 3px;
     background-color:#ffffff;
     display:block;
-    margin: 10px auto;
+    margin: 5px auto;
     transform-origin:center;
     transition:.5s;
  }
  .linha:nth-child(1){
-    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(15px) rotate(-45deg)' : 'rotate(0)')};
+    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(5px) rotate(-40deg)' : 'rotate(0)')};
     transition: 1s;
    }
    .linha:nth-child(2){
@@ -49,13 +49,16 @@ h1{
     
     }
     .linha:nth-child(3){
-    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(0px) rotate(45deg)' : 'rotate(0)')};
+    transform: ${(props) => (props.mobile === 'aberto' ? ' translateY(-3px) rotate(40deg)' : 'rotate(0)')};
     transition: 1s;
 }
 
 
 @media (max-width:900px) {
-    h1{display:none}
+
+  height: 50px;
+  h1{display:none}
+
 
 
   button{

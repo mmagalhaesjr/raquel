@@ -45,8 +45,7 @@ export const StyledContato = styled.section`
 
   label {
     font-size: 0.7rem;
-    letter-spacing: 1px;
-    color: #555;
+    color: #7a7a7a;
   }
 
   input, textarea {
@@ -55,6 +54,7 @@ export const StyledContato = styled.section`
     border: none;
     background: #e5e5e5;
     outline: none;
+     font-family: "Raleway", sans-serif;
   }
 
   textarea {
@@ -69,6 +69,8 @@ export const StyledContato = styled.section`
     background: #9a9a9a;
     cursor: pointer;
     transition: 0.3s;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
   }
 
   #botao:hover {
@@ -96,8 +98,12 @@ export const StyledContato = styled.section`
 
 
   @media (max-width: 900px) {
-    #container {
    
+
+    #container {
+    height: calc(100dvh - 50px); 
+    top:50px;
+
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -105,6 +111,8 @@ export const StyledContato = styled.section`
         padding: 4%;
         flex-direction: column;
         text-align: center;
+
+        //border: solid 2px red;
     }
 
     #formArea {

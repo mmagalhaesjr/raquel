@@ -3,7 +3,7 @@ import { fundo } from '../../constants/Cores';
 
 export const StyledHome = styled.main`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: ${fundo};
 
   #container {
@@ -15,7 +15,7 @@ export const StyledHome = styled.main`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //border: solid 5px red;
+   // border: solid 5px red;
   }
 
   #cxTexto {
@@ -31,7 +31,7 @@ export const StyledHome = styled.main`
   }
 
   h2 {
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(2rem, 10vw, 5rem);
     margin-bottom: 10px;
   }
 
@@ -55,9 +55,14 @@ export const StyledHome = styled.main`
 
 
   @media (max-width: 900px) {
+    height: 100dvh;
+   
   #container {
       flex-direction: column;
       text-align: center;
+      height: calc(100dvh - 50px); 
+      top:50px;
+
   }
 
    
@@ -80,11 +85,6 @@ export const StyledHome = styled.main`
      
     }
 
-    h1 {
-      font-size: 2rem;
-      
-    }
-
     p {
       font-size: 1rem;
     }
@@ -92,7 +92,7 @@ export const StyledHome = styled.main`
   #cxImagem{
     width: 90%;
     height: 70%;
-   margin-bottom: 20%;
+   margin-bottom:   10%;
     //border: solid 2px blue;
 
   }

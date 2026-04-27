@@ -6,8 +6,10 @@ import  { css } from 'styled-components';
 export const StyledMenuMobile = styled.div`
     
     width: 100%;
-    height:100vh;
-    background-color: #000000a2;
+    height: calc(100dvh - 50px); 
+    top:50px;
+    
+    background-color: #000000d3;
     color: #ffffff;
     position: fixed;
     z-index:1;
@@ -17,14 +19,17 @@ export const StyledMenuMobile = styled.div`
     display: ${(props) => (props.mobile === 'aberto' ? 'flex' : 'none')};
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+
+   
    
 
   
     .nav-lista{
-        margin-top: 100px;
         text-align:center; 
         color: #ffffff;
+margin-top: 5%;
+         //border: solid 2px red;
     }
    
 nav{

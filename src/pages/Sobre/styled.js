@@ -41,20 +41,26 @@ export const StyledSobre = styled.section`
   #texto{
     width: 90%;
     height: 90%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     //border: solid 2px blue;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: clamp( 1rem, 6vw, 3rem);
     margin-bottom: 10px;
     text-align: center;
   }
 
   p {
-   font-size: clamp(.7rem, 2.5vw, 1.5rem);
-    margin-top: 5%;
+   font-size: clamp(.7rem, 1.5rem, 1rem);
+    margin-top: 3%;
     line-height: 1.5;
-     text-align: justify;
+    text-align: justify;
   }
 
   #fotoRaquel {
@@ -66,12 +72,16 @@ export const StyledSobre = styled.section`
 
   @media (max-width: 900px) {
     #container {
+      height: calc(100dvh - 50px); 
+      top:50px;
+
       flex-direction: column;
       text-align: center;
+      //border: solid 2px blue;
     }
 
     #cxTexto {
-    width: 100%;
+    width: 95%;
     height: 70vh;
 
     display: flex;
@@ -87,11 +97,9 @@ export const StyledSobre = styled.section`
       display: flex;
       flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
   }
-     h2 {
-      font-size: 1.5rem;
-    }
+  
 
     p {
       font-size: .7rem;
@@ -100,9 +108,10 @@ export const StyledSobre = styled.section`
     }
     #fotoRaquel {
         width: auto;
-        height: 35%;
+        height: 30%;
         object-fit: cover;
-        margin-bottom: 20%;
+        margin-bottom: 2%;
+
         //border: solid 2px red;
     }
 

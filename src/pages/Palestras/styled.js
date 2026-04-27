@@ -18,7 +18,7 @@ export const StyledPalestras = styled.section`
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
 
       //border: solid 5px blue;
   }
@@ -37,15 +37,17 @@ export const StyledPalestras = styled.section`
     margin-bottom: 40px;
     letter-spacing: 2px;
     color: #444;
+   
+     
   }
 
   #cxCards {
-    width: 80%;
+    width: 90%;
     height: auto;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 5%;
     //border: solid 2px red;
   }
 
@@ -84,9 +86,10 @@ export const StyledPalestras = styled.section`
   @media (max-width: 800px) {
     #container {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 50px); 
+    top:50px;
     position: relative;
-    top: 100px;
+   
 
     display: flex;
     flex-direction:column;
