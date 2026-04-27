@@ -3,7 +3,7 @@ export const modulos = [
   {
     nome: "Módulo 1",
     aulas: [
-      { titulo: "Aula 1", video: "https://www.youtube.com/embed/Fc7XWW_Ehb8?si=d7OVN30mIysQb7ba" },
+      { titulo: "Aula 1", video: "https://www.youtube.com/embed/glMzo57HHvs?si=Q-EDNhxl0J0LHNa-" },
       { titulo: "Aula 2", video: "https://www.youtube.com/embed/xAWDqdpOlu8?si=K9TLnjYaQi-9-coi" }
     ]
   },

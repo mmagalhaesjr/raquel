@@ -10,6 +10,8 @@ export const StyledCurso = styled.div`
   justify-content: center;
   position: relative;
 
+
+
   #icone{
     color: #ffffff;
     font-size: 3rem;
@@ -67,18 +69,25 @@ export const Button = styled.button`
   color: white;
   cursor: pointer;
   &:hover { background: #1d4ed8; }
+  
 `;
 
 export const Layout = styled.div`
+  height: 100dvh;
+ 
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 16px;
   padding: 16px;
-  min-height: 100vh;
   background: #f3f4f6;
+
+
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -87,10 +96,15 @@ export const Sidebar = styled.div`
   padding: 16px;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  
 
   h2 {
     color: #837373;
     margin-bottom: 12px;
+  }
+
+  @media (max-width:900px) {
+    height:40%
   }
 `;
 
@@ -103,11 +117,16 @@ export const ModuleHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+
+  
 `;
 
 export const Chevron = styled.span`
   display: inline-block;
   transition: transform 0.3s ease;
+
+  
 `;
 
 export const AulaButton = styled.button`
@@ -120,6 +139,7 @@ export const AulaButton = styled.button`
   color: #918282;
   cursor: pointer;
   &:hover { background: #e5e7eb; }
+
 `;
 
 export const VideoArea = styled.div`
@@ -131,7 +151,10 @@ export const VideoArea = styled.div`
   align-items: center;
   justify-content: center;
 
+
+
   @media (max-width: 768px) {
     margin-top: 10px;
+    height: 60%;
   }
 `;
