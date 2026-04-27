@@ -9,6 +9,7 @@ import Palestras from './pages/Palestras/Palestras';
 import Treinamentos from './pages/Treinamentos/Treinamentos';
 import Curso from './pages/Curso/Curso';
 
+
 function App() {
 
 
@@ -16,6 +17,8 @@ function App() {
     <>
   <Router>
         <Routes>
+
+        
 
           <Route path="/" exact element={<Home />} />
           <Route path="/sobre" exact element={<Sobre />} />
