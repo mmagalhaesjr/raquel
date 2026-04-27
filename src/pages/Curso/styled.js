@@ -17,6 +17,7 @@ export const StyledCurso = styled.div`
     top: 10px;
     left: 10px;
     cursor: pointer;
+
   }
 
   @media (max-width: 768px) {
@@ -32,6 +33,13 @@ export const Card = styled.div`
   border-radius: 16px;
   width: 320px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+   //border: solid 2px red;
 `;
 
 
