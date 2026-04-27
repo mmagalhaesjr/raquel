@@ -18,6 +18,8 @@ export const StyledContato = styled.section`
     justify-content: space-between;
     gap: 40px;
     padding: 5%;
+
+   
     
     //border: solid 2px blue;
   }
@@ -111,6 +113,8 @@ export const StyledContato = styled.section`
         padding: 4%;
         flex-direction: column;
         text-align: center;
+
+         overflow: scroll;
 
         //border: solid 2px red;
     }
