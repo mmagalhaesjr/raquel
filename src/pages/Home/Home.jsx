@@ -1,6 +1,12 @@
 import Header from '../../components/Header/Header';
 import { StyledHome } from './styled';
-import raquel from "../../assets/raquel.png"
+import Capa from '../Capa/Capa';
+import Sobre from '../Sobre/Sobre';
+import Palestras from '../Palestras/Palestras';
+import Treinamentos from '../Treinamentos/Treinamentos';
+import Contato from '../Contato/Contato';
+import Teste from '../../components/Teste/Teste';
+
 
 
 
@@ -9,30 +15,15 @@ export default function Home() {
     return (
         <StyledHome>
 
-            <Header />
+           <Header />
+          
 
-            <section id='container'>
-
-                <div id='cxTexto'>
-                    <div id='texto'>
-                        <h2>Raquel Timoteo</h2>
-                        <p>
-                            Desnaturalizar violências, ampliar o possível:
-                            Onde há diversidade, há transformação.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div id='cxImagem'>
-                    <img id='fotoRaquel' src={raquel} alt="" />
-                </div>
-
-
-
-
-
-            </section>
+            <Capa/>
+            <Sobre />
+            <Palestras />
+            <Treinamentos />
+            <Contato />
+          
 
 
         </StyledHome>

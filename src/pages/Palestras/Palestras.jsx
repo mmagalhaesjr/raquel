@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+
 import { StyledPalestras } from "./styled";
 
 import img1 from "../../assets/palestras/img1.png";
@@ -19,7 +19,7 @@ export default function Palestras() {
 
   return (
     <StyledPalestras>
-      <Header />
+     
 
       <section id="container">
 

@@ -1,5 +1,5 @@
 import { StyledContato } from "./styled";
-import Header from '../../components/Header/Header';
+
 import { PiKeyReturnLight } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export default function Contato() {
   return (
     <StyledContato>
     
-      <Header />
+     
 
       <section id="container">
 

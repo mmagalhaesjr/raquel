@@ -3,14 +3,12 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledSobre = styled.section`
   width: 100%;
-  min-height: 100vh;
+   min-height: 100vh;
   background-color: ${fundo};
 
   #container {
     width: 100%;
-    height: calc(100vh - 100px); 
-    position: relative;
-    top:100px;
+    padding-top: 100px;
     
     display: flex;
     align-items: center;
@@ -19,14 +17,7 @@ export const StyledSobre = styled.section`
       //border: solid 2px blue;
   }
 
-   #icone{
-    color: #ffffff;
-    font-size: 3rem;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-  }
+ 
 
 
   #cxTexto {

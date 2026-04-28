@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         font-optical-sizing: auto;
         /* border: solid 5px #080808; */
-        overflow: hidden;
+    
         font-family: "Raleway", sans-serif;
          font-optical-sizing: auto;
         font-style: normal;

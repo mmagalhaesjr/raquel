@@ -4,16 +4,14 @@ import { Star } from 'lucide-react';
 
 export const StyledPalestras = styled.section`
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: ${fundo};
   
 
   #container {
     width: 100%;
-    height: calc(100vh - 100px);
     position: relative;
-    top: 100px;
-
+  
     display: flex;
     flex-direction:column;
     align-items: center;

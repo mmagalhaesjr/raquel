@@ -9,6 +9,7 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 position: fixed;
+top: 0;
 z-index: 1;
 
 

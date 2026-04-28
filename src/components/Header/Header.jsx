@@ -35,7 +35,7 @@ export default function Header() {
         return () => {
             document.body.style.overflow = ''; // Garante o reset ao desmontar
         };
-    }, [mobile]);
+    }, [mobile]); 
 
     return (
 
@@ -44,15 +44,15 @@ export default function Header() {
             <MenuMobile
                 mobile={mobile}
                 setMobile={setMobile}
-            />
+            />  
 
             <StyledHeader className={scrollY > 100 ? 'rolagem' : ''} mobile={mobile}>
                 
-                <button onClick={menuMobile}>
+             <button onClick={menuMobile}>
                     <span className='linha'></span>
                     <span className='linha'></span>
                     <span className='linha'></span>
-                </button>
+                </button> 
 
 
                 <Link to="/"><h1>HOME</h1></Link>

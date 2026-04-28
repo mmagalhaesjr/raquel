@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+
 import { StyledTreinamentos } from "./styled";
 import { useNavigate } from "react-router-dom";
 import { PiKeyReturnLight } from "react-icons/pi";
@@ -16,7 +16,7 @@ export default function Treinamentos() {
     return (
         <StyledTreinamentos>
 
-            <Header />
+          
 
             <section id="container">
 

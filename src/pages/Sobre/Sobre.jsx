@@ -1,4 +1,3 @@
-import Header from "../../components/Header/Header";
 import { StyledSobre } from "./styled";
 import raquel from '../../assets/raquel.png';
 import { PiKeyReturnLight } from "react-icons/pi";
@@ -15,7 +14,7 @@ export default function Sobre() {
     return (
         <StyledSobre>
 
-            <Header />
+        
 
             <section id='container'>
 
