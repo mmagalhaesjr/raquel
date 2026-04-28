@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { fundo } from "../constants/Cores"
 
 const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -49,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Raleway", sans-serif;
          font-optical-sizing: auto;
         font-style: normal;
+         background-color: ${fundo};
       
 
     }

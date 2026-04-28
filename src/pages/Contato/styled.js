@@ -3,7 +3,7 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledContato = styled.section`
   width: 100%;
-  min-height: 100dvh;
+
   background-color: ${fundo};
 
   #container {
@@ -14,21 +14,9 @@ export const StyledContato = styled.section`
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 5%;
-
-   
-    
-    //border: solid 2px blue;
+    padding: 5%;   
   }
 
-   #icone{
-    color: #ffffff;
-    font-size: 3rem;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-  }
 
 
 
@@ -90,7 +78,7 @@ export const StyledContato = styled.section`
   }
 
   #cxLink{
-     width: 80%;
+    width: 80%;
   }
 
 .icone{
@@ -127,6 +115,11 @@ export const StyledContato = styled.section`
       margin-top: 30px;
       margin-bottom: 5%;
     }
+
+  #cxLink{
+    width: 80%;
+    display: flex;
+  }
 
   }
 `;

@@ -4,10 +4,10 @@ import { Star } from 'lucide-react';
 
 export const StyledPalestras = styled.section`
   width: 100%;
-  min-height: 100dvh;
+  
   background-color: ${fundo};
+  padding: 5%;
 
-  //border: solid 2px red;
 
   display: flex;
   align-items: center;
@@ -23,14 +23,12 @@ export const StyledPalestras = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-
-      border: solid 5px blue;
   }
 
 
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 5%;
     letter-spacing: 2px;
@@ -98,6 +96,7 @@ export const StyledPalestras = styled.section`
   }
 
   h2{
+    font-size: 1.5rem;
     margin-top:5%;
   }
 

@@ -22,7 +22,7 @@ export const StyledDepoimento = styled.section`
   }
 
   h2{
-      font-size: 2rem;
+      font-size: 3rem;
   }
 
   #beneficios {
@@ -123,12 +123,10 @@ export const StyledDepoimento = styled.section`
     align-items: center;
    justify-content: flex-start;
     gap: 40px;
-
-    overflow: scroll;
-
   }
 
   h2{
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 20px;
   }

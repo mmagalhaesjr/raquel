@@ -5,17 +5,12 @@ export const StyledHome = styled.main`
   width: 100%;
   background-color: ${fundo};
 
-
   display: flex;
   flex-direction: column;
 
    
-
-
- 
  .blocoSticky {
   display: flex;
-  min-height: 200vh; 
 }
 
 .imagem {
@@ -37,7 +32,7 @@ export const StyledHome = styled.main`
 }
 
 .textos > * {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -54,6 +49,7 @@ export const StyledHome = styled.main`
 
   .textos {
     width: 100%;
+    height: fit-content;
   }
 }
 

@@ -14,8 +14,6 @@ export const StyledSobre = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: solid 2px red;
   }
 
   #texto {
@@ -27,11 +25,10 @@ export const StyledSobre = styled.section`
     align-items: center;
     justify-content: center;
     gap: 3%;
-
-    border: solid 2px blue;
   }
 
   h2 {
+    font-size: 3rem;
     font-size: clamp(1rem, 6vw, 3rem);
     margin-bottom: 10px;
     text-align: center;
@@ -44,10 +41,10 @@ export const StyledSobre = styled.section`
   }
 
   @media (max-width: 900px) {
-    height: fit-content;
-     border: solid 5px orange;
+      height: fit-content;
 
     #container {
+      height: 50vh;
       flex-direction: column;
       text-align: center;
     }
@@ -56,10 +53,14 @@ export const StyledSobre = styled.section`
       width: 95%;
     }
 
+    h2{
+      font-size: 1.5rem;
+    }
+
     p {
-      font-size: 0.7rem;
+      font-size: 1rem;
       margin-top: 0%;
-      line-height: 1;
+      line-height: 1.3;
     }
   }
 `;

@@ -46,7 +46,7 @@ export default function Contato() {
         </div>
 
         <div id="frase">
-          <RxQuote />
+          <RxQuote className="icone" />
           <p>
             Falar de Diversidade, Equidade, Inclusão e Pertencimento
             pode ser uma estratégia de negócio.
