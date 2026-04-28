@@ -3,7 +3,7 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledContato = styled.section`
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: ${fundo};
 
   #container {
@@ -83,18 +83,20 @@ export const StyledContato = styled.section`
     position: relative;
   }
 
-  #frase span {
-    font-size: 4rem;
-    position: absolute;
-    top: -30px;
-    left: -20px;
-  }
 
   #frase p {
     font-size: 1.2rem;
     line-height: 1.6;
   }
 
+  #cxLink{
+     width: 80%;
+  }
+
+.icone{
+    cursor: pointer;
+    font-size: 3rem;
+  }
 
   @media (max-width: 900px) {
    
@@ -126,9 +128,5 @@ export const StyledContato = styled.section`
       margin-bottom: 5%;
     }
 
-    #frase span {
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 `;

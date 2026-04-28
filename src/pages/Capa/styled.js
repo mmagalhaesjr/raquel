@@ -3,23 +3,27 @@ import { fundo } from '../../constants/Cores';
 
 export const StyledCapa = styled.main`
   width: 100%;
-  height: 200vh;
   background-color: ${fundo};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   #container {
     width: 100%;
-    height: calc(100vh - 100px); 
-    position: relative;
-    top:100px;
-    
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
+
    // border: solid 5px red;
   }
-
+img{
+  display: none;
+}
   #cxTexto {
-    width: 60%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -27,29 +31,21 @@ export const StyledCapa = styled.main`
     //border: solid 2px red;
   }
   #texto{
-      // border: solid 2px blue;
+      //border: solid 2px blue;
+      text-align: center;
   }
 
   h2 {
-    font-size: clamp(2rem, 10vw, 5rem);
+    font-size: clamp(2rem, 10vw, 7rem);
     margin-bottom: 10px;
   }
 
   p {
     font-size: 1.2rem;
     max-width: 500px;
-  }
-
-  #cxImagem{
-    width: 40%;
-    height: 100%;
-    //border: solid 2px blue;
-  }
-
-  #fotoRaquel {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    text-align: center;
+    line-height: 1.5;
+    
   }
 
 
@@ -60,10 +56,16 @@ export const StyledCapa = styled.main`
   #container {
       flex-direction: column;
       text-align: center;
-      height: calc(100dvh - 50px); 
-      top:50px;
-
+      height: calc(100dvh); 
+      margin-top: 50px;
+    
   }
+
+  img{
+    display: block;
+    width: 90%;
+    
+}
 
    
   #cxTexto {
@@ -89,18 +91,5 @@ export const StyledCapa = styled.main`
       font-size: 1rem;
     }
 
-  #cxImagem{
-    width: 90%;
-    height: 70%;
-   margin-bottom:   10%;
-    //border: solid 2px blue;
-
-  }
-
-  #fotoRaquel {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   }
 `;

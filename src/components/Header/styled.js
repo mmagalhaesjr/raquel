@@ -60,8 +60,6 @@ h1{
   height: 50px;
   h1{display:none}
 
-
-
   button{
     display: block;
   

@@ -3,110 +3,63 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledSobre = styled.section`
   width: 100%;
-   min-height: 100vh;
+  height:100dvh ;
   background-color: ${fundo};
-
-  #container {
-    width: 100%;
-    padding-top: 100px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-      //border: solid 2px blue;
-  }
 
  
 
-
-  #cxTexto {
-    width: 70%;
+  #container {
+    width: 100%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    //border: solid 2px red;
+
+    border: solid 2px red;
   }
-  #texto{
+
+  #texto {
     width: 90%;
-    height: 90%;
-    
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3%;
 
-    //border: solid 2px blue;
+    border: solid 2px blue;
   }
 
   h2 {
-    font-size: clamp( 1rem, 6vw, 3rem);
+    font-size: clamp(1rem, 6vw, 3rem);
     margin-bottom: 10px;
     text-align: center;
   }
 
   p {
-   font-size: clamp(.7rem, 1.5rem, 1rem);
-    margin-top: 3%;
+    font-size: clamp(0.7rem, 1.5rem, 1rem);
     line-height: 1.5;
     text-align: justify;
   }
 
-  #fotoRaquel {
-    width: 40%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-
   @media (max-width: 900px) {
-    #container {
-      height: calc(100dvh - 50px); 
-      top:50px;
+    height: fit-content;
+     border: solid 5px orange;
 
+    #container {
       flex-direction: column;
       text-align: center;
-      //border: solid 2px blue;
     }
 
-    #cxTexto {
-    width: 95%;
-    height: 70vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    //border: solid 2px red;
-  }
-  #texto{
-    width: 95%;
-    height: 95%;
-    //border: solid 2px blue;
-
-      display: flex;
-      flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  
+    #texto {
+      width: 95%;
+    }
 
     p {
-      font-size: .7rem;
+      font-size: 0.7rem;
       margin-top: 0%;
-      line-height: 1.;
+      line-height: 1;
     }
-    #fotoRaquel {
-        width: auto;
-        height: 30%;
-        object-fit: cover;
-        margin-bottom: 2%;
-
-        //border: solid 2px red;
-    }
-
- 
   }
-
-`
+`;

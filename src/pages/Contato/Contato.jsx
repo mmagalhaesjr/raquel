@@ -2,23 +2,26 @@ import { StyledContato } from "./styled";
 
 import { PiKeyReturnLight } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
+import { RxQuote } from "react-icons/rx";
+import { CiInstagram } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 
 export default function Contato() {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-     function Navegar(){
+  function Navegar() {
     navigate("/");
   }
 
 
   return (
     <StyledContato>
-    
-     
+
+
 
       <section id="container">
 
-         {/* <PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */}
+        {/* <PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */}
 
         <div id="formArea">
           <form>
@@ -36,17 +39,25 @@ export default function Contato() {
 
             <button id="botao" type="submit">ENVIAR</button>
           </form>
+             <div id="cxLink">
+        <CiInstagram className="icone" />
+        <CiLinkedin className="icone" />
+      </div>
         </div>
 
         <div id="frase">
-          <span>"</span>
+          <RxQuote />
           <p>
-            Falar de Diversidade Equidade Inclusão e Pertencimento
+            Falar de Diversidade, Equidade, Inclusão e Pertencimento
             pode ser uma estratégia de negócio.
           </p>
+
         </div>
 
       </section>
+
+   
+
     </StyledContato>
   );
 }

@@ -1,6 +1,7 @@
 
 import { StyledCapa } from './styled';
-import raquel from "../../assets/raquel.png"
+import raquel from '../../assets/raquel.png';
+
 
 
 
@@ -14,7 +15,7 @@ export default function Capa() {
 
                 <div id='cxTexto'>
                     <div id='texto'>
-                        <h2>Raquel Timoteo</h2>
+                        <h2>Raquel <br></br>Timoteo</h2>
                         <p>
                             Desnaturalizar violências, ampliar o possível:
                             Onde há diversidade, há transformação.
@@ -23,12 +24,7 @@ export default function Capa() {
 
                 </div>
 
-                <div id='cxImagem'>
-                    <img id='fotoRaquel' src={raquel} alt="" />
-                </div>
-
-
-
+                <img src={raquel} alt="" />
 
 
             </section>

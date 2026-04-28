@@ -6,6 +6,12 @@ export const StyledPalestras = styled.section`
   width: 100%;
   min-height: 100dvh;
   background-color: ${fundo};
+
+  //border: solid 2px red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 
   #container {
@@ -18,21 +24,15 @@ export const StyledPalestras = styled.section`
     justify-content: center;
     gap: 10px;
 
-      //border: solid 5px blue;
+      border: solid 5px blue;
   }
-   #icone{
-    color: #ffffff;
-    font-size: 3rem;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-  }
+
 
 
   h2 {
+    font-size: 2rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
     letter-spacing: 2px;
     color: #444;
    
@@ -84,8 +84,7 @@ export const StyledPalestras = styled.section`
   @media (max-width: 800px) {
     #container {
     width: 100%;
-    height: calc(100dvh - 50px); 
-    top:50px;
+   
     position: relative;
    
 
@@ -95,7 +94,6 @@ export const StyledPalestras = styled.section`
    justify-content: flex-start;
 
     gap: 10px;
-    overflow: scroll;
    
   }
 

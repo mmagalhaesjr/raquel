@@ -1,11 +1,11 @@
 
-import { StyledTreinamentos } from "./styled";
+import { StyledDepoimento } from "./styled";
 import { useNavigate } from "react-router-dom";
 import { PiKeyReturnLight } from "react-icons/pi";
 
 import { MessageSquare, Users, Award, CheckCircle, ArrowLeft, ArrowRight } from "lucide-react";
 
-export default function Treinamentos() {
+export default function Depoimento() {
 
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ export default function Treinamentos() {
     }
 
     return (
-        <StyledTreinamentos>
+        <StyledDepoimento>
 
           
 
@@ -26,6 +26,31 @@ export default function Treinamentos() {
                 <h2>
                     Quando o treinamento sobre diversidade é parte da estratégia de negócios:
                 </h2>
+
+
+                 <section id="depoimentos">
+
+                    <h3>DEPOIMENTOS</h3>
+
+                    <div id="slider">
+
+                        <button><ArrowLeft /></button>
+
+                        <div id="depoimento">
+                            <p>
+                                “Tratar violência como violêncoa... sua fala é tão sensível quanto impactante. Obrigada por me deixar incomodada e pensativa... aprendendo sempre!”
+                               .
+                            </p>
+
+                            <span>Adriana Souza</span>
+                            <small>Educadora</small>
+                        </div>
+
+                        <button><ArrowRight /></button>
+
+                    </div>
+
+                </section>
 
                 <div id="beneficios">
 
@@ -57,37 +82,13 @@ export default function Treinamentos() {
                     </p>
                 </div>
 
-                <section id="depoimentos">
-
-                    <h3>DEPOIMENTOS</h3>
-
-                    <div id="slider">
-
-                        <button><ArrowLeft /></button>
-
-                        <div id="depoimento">
-                            <p>
-                                ““Tratar violência como violêncoa... sua fala é tão sensível quanto impactante. Obrigada por me deixar incomodada e pensativa... aprendendo sempre!”
-
-                                Adriana Souza
-                                Educadora.”
-                            </p>
-
-                            <span>Adriana Souza</span>
-                            <small>Educadora</small>
-                        </div>
-
-                        <button><ArrowRight /></button>
-
-                    </div>
-
-                </section>
+               
 
             </section>
 
             {/* DEPOIMENTOS */}
 
 
-        </StyledTreinamentos>
+        </StyledDepoimento>
     );
 }

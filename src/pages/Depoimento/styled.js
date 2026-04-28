@@ -1,31 +1,29 @@
 import styled from "styled-components";
 import { fundo } from "../../constants/Cores";
 
-export const StyledTreinamentos = styled.section`
+export const StyledDepoimento = styled.section`
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
+   height: 100vh;
   background: ${fundo};
+
+   //border: solid 2px red;
 
   #container {
     width: 100%;
-    position: relative;
-    padding: 0 8%;
+    height: 100%;
     
-    display: flex;
+    display:flex;
     flex-direction:column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-evenly ;
+
+    //border: solid 2px blue;
   }
 
-   #icone{
-    color: #ffffff;
-    font-size: 3rem;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
+  h2{
+      font-size: 2rem;
   }
-
 
   #beneficios {
     display: flex;
@@ -33,6 +31,7 @@ export const StyledTreinamentos = styled.section`
     gap: 5%;
     margin-bottom: 0%;
     text-align: center;
+
     //border: solid 2px red;
    
   }
@@ -44,8 +43,7 @@ export const StyledTreinamentos = styled.section`
     align-items: center;
     gap: 10px;
     color: #333;
-      
-   
+
   }
 
   .item p {
@@ -67,7 +65,7 @@ export const StyledTreinamentos = styled.section`
   }
 
   #depoimentos {
-    width: 100%;
+    width: 80%;
     height: 200px;
     background: #6b6b6b;
     color: white;
