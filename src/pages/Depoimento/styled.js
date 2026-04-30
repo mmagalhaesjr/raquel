@@ -4,6 +4,7 @@ import { fundo } from "../../constants/Cores";
 export const StyledDepoimento = styled.section`
   width: 100%;
   height: 100dvh;
+  z-index: 0;
   
   background: ${fundo};
  
@@ -44,6 +45,7 @@ export const StyledDepoimento = styled.section`
     color: white;
     text-align: center;
     position: relative;
+    
 
   }
 

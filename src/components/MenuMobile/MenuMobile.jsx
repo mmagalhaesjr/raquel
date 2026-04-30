@@ -1,26 +1,28 @@
-import { Link, useNavigate } from "react-router-dom";
 import { StyledMenuMobile } from "./styled";
 import PropTypes from "prop-types";
 
 export default function MenuMobile({ mobile, setMobile }) {
-   
-  const navegar = useNavigate();
 
-    const navegue = (path) => {
-        navegar(path);
-        setMobile('fechado')
-    
+    const scrollTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            setMobile('fechado');
+        }
     };
 
     return (
         <StyledMenuMobile mobile={mobile}>
             <nav className="nav-lista">
-                <Link to="/" onClick={() => navegue("/")}>HOME</Link>
-                <Link to="/sobre" onClick={() => navegue("/sobre")}>SOBRE</Link>
-                <Link to="/palestras" onClick={() => navegue("/palestras")}>PALESTRAS</Link>
-                <Link to="/treinamento" onClick={() => navegue("/treinamento")}>TREINAMENTOS</Link>
-                <Link to="/contato" onClick={() => navegue("/contato")}>CONTATO</Link>
-                <Link to="/curso" onClick={() => navegue("/curso")}>ÁREA DO ALUNO</Link>
+
+                <button onClick={() => scrollTo("home")}>HOME</button>
+                <button onClick={() => scrollTo("sobre")}>SOBRE</button>
+                <button onClick={() => scrollTo("palestra")}>PALESTRAS</button>
+                <button onClick={() => scrollTo("depoimento")}>DEPOIMENTOS</button>
+                <button onClick={() => scrollTo("contato")}>CONTATO</button>
+
+                <a href="/curso">ÁREA DO ALUNO</a>
+
             </nav>
         </StyledMenuMobile>
     );
