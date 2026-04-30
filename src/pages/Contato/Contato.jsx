@@ -1,10 +1,11 @@
 import { StyledContato } from "./styled";
 
 import { PiKeyReturnLight } from "react-icons/pi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxQuote } from "react-icons/rx";
 import { CiInstagram } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
+import { Target } from "lucide-react";
 
 export default function Contato() {
   const navigate = useNavigate();
@@ -15,9 +16,11 @@ export default function Contato() {
 
 
   return (
-    <StyledContato>
+    <StyledContato id="contato">
 
-
+      <h2>
+        CONTATO
+      </h2>
 
       <section id="container">
 
@@ -39,10 +42,12 @@ export default function Contato() {
 
             <button id="botao" type="submit">ENVIAR</button>
           </form>
-             <div id="cxLink">
-        <CiInstagram className="icone" />
-        <CiLinkedin className="icone" />
-      </div>
+
+          <div id="cxLink">
+            <Link to={"https://www.instagram.com/raqueltimoteoeducacao/"} target="_blank"><CiInstagram className="icone" /></Link>
+            <Link to={"https://www.linkedin.com/in/raquel-timoteo-39122b67/"} target="_blank"><CiLinkedin className="icone" /></Link>
+          </div>
+          
         </div>
 
         <div id="frase">
@@ -56,7 +61,7 @@ export default function Contato() {
 
       </section>
 
-   
+
 
     </StyledContato>
   );

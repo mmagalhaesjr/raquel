@@ -3,11 +3,12 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledDepoimento = styled.section`
   width: 100%;
-  min-height: 100dvh;
-   height: 100vh;
+  height: 100dvh;
+  
   background: ${fundo};
+ 
 
-   //border: solid 2px red;
+  
 
   #container {
     width: 100%;
@@ -16,14 +17,126 @@ export const StyledDepoimento = styled.section`
     display:flex;
     flex-direction:column;
     align-items: center;
-    justify-content:space-evenly ;
+    justify-content:space-evenly;
+   
+    
+  }
 
-    //border: solid 2px blue;
+
+  //--------------------------------------------------------Depoimento
+  h3{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5%;
   }
 
   h2{
-      font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5%;
   }
+  #cxDepoimentos {
+    width: 80%;
+    height: 250px;
+    background: #6b6b6b;
+    color: white;
+    text-align: center;
+    position: relative;
+
+  }
+
+  #cxDepoimentos h3 {
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  #slider {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+
+  #depoimento {
+    max-width: 600px;
+  }
+
+  #depoimento p {
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  #depoimento span {
+    display: block;
+    font-weight: bold;
+  }
+
+  #depoimento small {
+    opacity: 0.8;
+  }
+
+
+.swiper-button-prev,
+.swiper-button-next{
+
+ color: #fff;
+ margin: 1%;
+ 
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+ height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.swiper-wrapper {
+  height: auto;
+  align-items: center;
+  background: #6b6b6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 250px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+
+
+//--------------------------------------------------------
 
   #beneficios {
     display: flex;
@@ -31,9 +144,6 @@ export const StyledDepoimento = styled.section`
     gap: 5%;
     margin-bottom: 0%;
     text-align: center;
-
-    //border: solid 2px red;
-   
   }
 
   .item {
@@ -64,65 +174,25 @@ export const StyledDepoimento = styled.section`
   
   }
 
-  #depoimentos {
-    width: 80%;
-    height: 200px;
-    background: #6b6b6b;
-    color: white;
-    padding: 40px 8%;
-    text-align: center;
+  
 
-    //border: solid 2px red;
-
-  }
-
-  #depoimentos h3 {
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-  }
-
-  #slider {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #slider button {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-
-  #depoimento {
-    max-width: 600px;
-  }
-
-  #depoimento p {
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  #depoimento span {
-    display: block;
-    font-weight: bold;
-  }
-
-  #depoimento small {
-    opacity: 0.8;
-  }
 
  
   @media (max-width: 900px) {
-  #container {
-  height: calc(100dvh - 50px); 
-  top:50px;
+   height: auto;
 
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+
+  #container {
     display: flex;
     flex-direction:column;
     align-items: center;
-   justify-content: flex-start;
-    gap: 40px;
+    justify-content: center;
+    gap: 100px;
   }
 
   h2{
@@ -149,6 +219,16 @@ export const StyledDepoimento = styled.section`
 
   }
 
+    #cxDepoimentos {
+    width: 95%;
+    height: 250px;
+    background: #6b6b6b;
+    color: white;
+    text-align: center;
+    position: relative;
+
+  }
+
     #depoimentos{
       width: 100%;
       height: auto;
@@ -161,5 +241,6 @@ export const StyledDepoimento = styled.section`
       gap: 20px;
       
     }
+    
   }
 `;

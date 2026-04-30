@@ -18,7 +18,7 @@ export default function Palestras() {
 
 
   return (
-    <StyledPalestras>
+    <StyledPalestras id="palestra">
      
 
       <section id="container">

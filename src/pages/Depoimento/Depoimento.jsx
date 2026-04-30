@@ -4,6 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { PiKeyReturnLight } from "react-icons/pi";
 
 import { MessageSquare, Users, Award, CheckCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { Depoimentos } from "../../components/Depoimentos/Depoimentos";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCreative, Navigation, Pagination, A11y } from 'swiper/modules';
+import 'swiper/css/effect-creative';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function Depoimento() {
 
@@ -14,43 +22,74 @@ export default function Depoimento() {
     }
 
     return (
-        <StyledDepoimento>
+        <StyledDepoimento id="depoimento">
 
-          
+
 
             <section id="container">
 
                 {/*  <PiKeyReturnLight id="icone" onClick={() => navigate("/")} /> */}
 
 
+
+
+
+                <section id="cxDepoimentos">
+
+                    <h3>DEPOIMENTOS</h3>
+                    
+                  <Swiper
+  modules={[EffectCreative, Navigation, Pagination, A11y]}
+  navigation
+  pagination={{ clickable: true }} // ✅ ISSO AQUI resolve
+  grabCursor={true}
+  effect={'creative'}
+  creativeEffect={{
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ['100%', 0, 0],
+    },
+  }}
+>
+
+
+                        {Depoimentos.map((dep) => (
+                            <SwiperSlide >
+                                <div key={dep.nome} id="slider">
+
+
+                                    <div id="depoimento">
+
+                                        <p>{dep.texto}</p>
+
+                                        <span>{dep.nome}</span>
+                                        <small>{dep.profissao}</small>
+                                    </div>
+
+
+                                </div>
+                            </SwiperSlide>
+                        ))}
+
+
+
+
+                    </Swiper>
+
+
+
+
+                </section>
+
+
+
+
                 <h2>
                     Quando o treinamento sobre diversidade é parte da estratégia de negócios:
                 </h2>
-
-
-                 <section id="depoimentos">
-
-                    <h3>DEPOIMENTOS</h3>
-
-                    <div id="slider">
-
-                        <button><ArrowLeft /></button>
-
-                        <div id="depoimento">
-                            <p>
-                                “Tratar violência como violêncoa... sua fala é tão sensível quanto impactante. Obrigada por me deixar incomodada e pensativa... aprendendo sempre!”
-                               .
-                            </p>
-
-                            <span>Adriana Souza</span>
-                            <small>Educadora</small>
-                        </div>
-
-                        <button><ArrowRight /></button>
-
-                    </div>
-
-                </section>
 
                 <div id="beneficios">
 
@@ -82,7 +121,7 @@ export default function Depoimento() {
                     </p>
                 </div>
 
-               
+
 
             </section>
 

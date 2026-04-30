@@ -3,8 +3,20 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledContato = styled.section`
   width: 100%;
+  height: 90vh;
+  
+
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
   background-color: ${fundo};
+
+  h2{
+    font-size: 2rem;
+  }
 
   #container {
     width: 100%;
@@ -84,10 +96,15 @@ export const StyledContato = styled.section`
 .icone{
     cursor: pointer;
     font-size: 3rem;
+    color: #666;
   }
 
   @media (max-width: 900px) {
-   
+  height: auto;
+
+   h2{
+    margin-top: 20%;
+   }
 
     #container {
     height: calc(100dvh - 50px); 

@@ -35,7 +35,7 @@ export default function Header() {
         return () => {
             document.body.style.overflow = ''; // Garante o reset ao desmontar
         };
-    }, [mobile]); 
+    }, [mobile]);
 
     return (
 
@@ -44,23 +44,52 @@ export default function Header() {
             <MenuMobile
                 mobile={mobile}
                 setMobile={setMobile}
-            />  
+            />
 
             <StyledHeader className={scrollY > 100 ? 'rolagem' : ''} mobile={mobile}>
-                
-             <button onClick={menuMobile}>
+
+                <button onClick={menuMobile}>
                     <span className='linha'></span>
                     <span className='linha'></span>
                     <span className='linha'></span>
-                </button> 
+                </button>
+
+                <ul className="navList">
+
+                    <li>
+                        <a href="#home">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sobre">
+                            SOBRE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#palestra">
+                            PALESTRAS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#depoimento">
+                            DEPOIMENTOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato">
+                            CONTATO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/curso">
+                            ÁREA DO ALUNO
+                        </a>
+                    </li>
+
+                </ul>
 
 
-                <Link to="/"><h1>HOME</h1></Link>
-                <Link to="/sobre"><h1>SOBRE</h1></Link>
-                <Link to="/palestras"><h1>PALESTRAS</h1></Link>
-                <Link to="/treinamento"><h1>DEPOIMENTOS</h1></Link>
-                <Link to="/contato"><h1>CONTATO</h1></Link>
-                <Link to="/curso"><h1>ÁREA DO ALUNO</h1></Link>
 
 
             </StyledHeader>

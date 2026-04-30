@@ -12,15 +12,23 @@ position: fixed;
 top: 0;
 z-index: 1;
 
+.navList{
+  width: 100%;
 
-h1{ 
-    font-size: 1.2rem;
-    color: #ffffff;
-    cursor: pointer;
-    &:hover{
-        color:#adadad
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
 }
+.navList a{
+color: #ffffff;
+
+&:hover{
+  color: #d3cece;
+}
+}
+
+//-----------------------------------------------------
 
   button{
     display: none;
@@ -58,10 +66,17 @@ h1{
 @media (max-width:900px) {
 
   height: 50px;
-  h1{display:none}
+  display: flex;
+  align-items:center;
+  justify-content: left;
+  position: fixed;
+
+  ul li{display:none}
 
   button{
     display: block;
+    margin-left: 5%;;
+    
   
   }
 }

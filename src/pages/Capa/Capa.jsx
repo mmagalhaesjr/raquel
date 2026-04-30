@@ -8,7 +8,7 @@ import raquel from '../../assets/raquel.png';
 
 export default function Capa() {
     return (
-        <StyledCapa>
+        <StyledCapa id='home'>
 
 
             <section id='container'>

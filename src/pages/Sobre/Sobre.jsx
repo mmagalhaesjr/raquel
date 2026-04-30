@@ -10,7 +10,7 @@ export default function Sobre() {
 
 
     return (
-        <StyledSobre>
+        <StyledSobre id="sobre">
 
 
 

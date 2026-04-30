@@ -4,6 +4,7 @@ import { Star } from 'lucide-react';
 
 export const StyledPalestras = styled.section`
   width: 100%;
+  height: 100vh;
   
   background-color: ${fundo};
   padding: 5%;
@@ -31,6 +32,7 @@ export const StyledPalestras = styled.section`
     font-size: 3rem;
     text-align: center;
     margin-bottom: 5%;
+    margin-top: 2%;
     letter-spacing: 2px;
     color: #444;
    
@@ -79,7 +81,8 @@ export const StyledPalestras = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
+    height: auto;
     #container {
     width: 100%;
    
