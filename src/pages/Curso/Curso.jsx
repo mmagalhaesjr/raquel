@@ -1,20 +1,32 @@
 import { useState } from "react";
-import { cpfsAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
-import { modulos } from "../../components/Curso/ListaVideos/ListaVideos";
-import { AulaButton, Button, Card, Chevron, Input, Layout, ModuleHeader, Sidebar, StyledCurso, Title, VideoArea } from './styled';
 import { useNavigate } from "react-router-dom";
 
+import { cpfsAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
+import { modulos } from "../../components/Curso/ListaVideos/ListaVideos";
+
+import {
+  AulaButton,
+  Button,
+  Card,
+  Chevron,
+  Input,
+  Layout,
+  ModuleHeader,
+  Sidebar,
+  StyledCurso,
+  Title,
+  VideoArea,
+} from "./styled";
 
 import { PiKeyReturnLight } from "react-icons/pi";
 
-
 export default function Curso() {
-
   const [logado, setLogado] = useState(false);
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [aulaSelecionada, setAulaSelecionada] = useState(null);
   const [moduloAberto, setModuloAberto] = useState(null);
+
   const navigate = useNavigate();
 
   function formatarCPF(valor) {
@@ -35,68 +47,68 @@ export default function Curso() {
       return;
     }
 
-    if (!cpfsAutorizados.includes(cpfLimpo)) {
+    const usuario = cpfsAutorizados.find(
+      (pessoa) => pessoa.cpf === cpfLimpo
+    );
+
+    if (!usuario) {
       alert("CPF não autorizado");
       return;
     }
 
+    setNome(usuario.nome);
     setLogado(true);
   }
 
-  function Navegar() {
-    navigate("/");
-  }
-
-
-
   return (
     <>
-
-
-
       {!logado ? (
         <StyledCurso>
-
-          <PiKeyReturnLight id="icone" onClick={() => navigate("/")} />
+          <PiKeyReturnLight
+            id="icone"
+            onClick={() => navigate("/")}
+          />
 
           <Card>
-
             <Title>Login do Curso</Title>
 
-            <Input
-              type="text"
-              placeholder="Seu nome"
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-            />
 
             <Input
               type="text"
               placeholder="Seu CPF"
               value={cpf}
-              onChange={(e) => setCpf(formatarCPF(e.target.value))}
+              onChange={(e) =>
+                setCpf(formatarCPF(e.target.value))
+              }
             />
 
-            <Button onClick={handleLogin}>Entrar</Button>
+            <Button onClick={handleLogin}>
+              Entrar
+            </Button>
           </Card>
-
-
         </StyledCurso>
       ) : (
         <Layout>
           <Sidebar>
+            <h3 id="nome">Bem-vindo, {nome}</h3>
+
             {modulos.map((modulo, index) => (
               <div key={index}>
                 <ModuleHeader
                   onClick={() =>
                     setModuloAberto(
-                      moduloAberto === index ? null : index
+                      moduloAberto === index
+                        ? null
+                        : index
                     )
                   }
                 >
                   {modulo.nome}
+
                   <Chevron>
-                    {moduloAberto === index ? "▲" : "▼"}
+                    {moduloAberto === index
+                      ? "▲"
+                      : "▼"}
                   </Chevron>
                 </ModuleHeader>
 
@@ -104,7 +116,9 @@ export default function Curso() {
                   modulo.aulas.map((aula, i) => (
                     <AulaButton
                       key={i}
-                      onClick={() => setAulaSelecionada(aula)}
+                      onClick={() =>
+                        setAulaSelecionada(aula)
+                      }
                     >
                       {aula.titulo}
                     </AulaButton>
@@ -121,6 +135,7 @@ export default function Curso() {
                 src={aulaSelecionada.video}
                 title={aulaSelecionada.titulo}
                 frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             ) : (
@@ -130,5 +145,5 @@ export default function Curso() {
         </Layout>
       )}
     </>
-  )
+  );
 }

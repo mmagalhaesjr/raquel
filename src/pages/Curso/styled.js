@@ -81,6 +81,8 @@ export const Layout = styled.div`
   padding: 16px;
   background: #f3f4f6;
 
+ 
+
 
 
   @media (max-width: 768px) {
@@ -96,15 +98,20 @@ export const Sidebar = styled.div`
   padding: 16px;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  
+ 
 
   h2 {
     color: #837373;
     margin-bottom: 12px;
   }
 
+  h3{
+    font-size: .9rem;
+    margin-bottom: 5%;
+  }
+
   @media (max-width:900px) {
-    height:40%
+    height:50%
   }
 `;
 
@@ -125,7 +132,7 @@ export const ModuleHeader = styled.div`
 export const Chevron = styled.span`
   display: inline-block;
   transition: transform 0.3s ease;
-
+ 
   
 `;
 
@@ -139,6 +146,8 @@ export const AulaButton = styled.button`
   color: #918282;
   cursor: pointer;
   &:hover { background: #e5e7eb; }
+
+ 
 
 `;
 
