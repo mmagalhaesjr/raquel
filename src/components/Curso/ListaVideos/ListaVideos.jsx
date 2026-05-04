@@ -3,28 +3,29 @@ export const modulos = [
   {
     nome: "Módulo 1",
     aulas: [
-      { titulo: "Aula 1", video: "https://www.youtube.com/embed/glMzo57HHvs?si=Q-EDNhxl0J0LHNa-" },
-      { titulo: "Aula 2", video: "https://www.youtube.com/embed/xAWDqdpOlu8?si=K9TLnjYaQi-9-coi" }
+      { titulo: "TEMA 1: Diversidade e vieses inconscientes como nascem os preconceitos", video: "https://www.youtube.com/embed/Jw_kvp5UVJU?si=on5LNq0XjTcQKOz9" },
+      { titulo: "TEMA 2: (parte 1): Equidade de gênero", video: "https://www.youtube.com/embed/JEw27wuDbFA?si=RQTDxXqy8B23J5UT" },
+      { titulo: "TEMA 2: (parte 2): Pensando a masculinidade", video: "https://www.youtube.com/embed/Ej6Rsb5ocZA?si=TmWtqC1Ky4Lccrwa" },
     ]
   },
   {
     nome: "Módulo 2",
     aulas: [
-     { titulo: "Aula 3", video: "https://www.youtube.com/embed/eyRIrz8I9OQ?si=2-cyIbDFoDJUVENa" },
-      { titulo: "Aula 4", video: "https://www.youtube.com/embed/Ri-eF5PJ2X0?si=ae5_amXs4EkKpHxk" }
+     { titulo: "TEMA 3: Relações étnico raciais, branquitude e o mundo do trabalho", video: "https://www.youtube.com/embed/jbXOk2JaccA?si=zbUVPmV-pcesM8Lt" },
+      { titulo: "TEMA 4: Diversidade sexual e de gênero a realidade da comunidade LGBT+", video: "https://www.youtube.com/embed/hDNvef6Ggog?si=fIWCrw03n3py1VIM" }
     ]
   },
   {
     nome: "Módulo 3",
     aulas: [
-   { titulo: "Aula 5", video: "https://www.youtube.com/embed/lxhqCcrnTv4?si=Etr_77eCfLyzFvHz" },
-      { titulo: "Aula 6", video: "https://www.youtube.com/embed/Ec08db2hP10?si=RnBTrQIrn01BB5o2" }
+   { titulo: "TEMA 5: Pessoas com deficiência e inclusão", video: "https://www.youtube.com/embed/Bn1Del8SuEo?si=thqp5Xc85MIF8B1T" },
+      { titulo: "TEMA 6: Etarismo no ambiente do trabalho", video: "https://www.youtube.com/embed/bHYTotpLrdI?si=gNIajw8kPgR4ANbN" }
     ]
   },
   {
     nome: "Módulo 4",
     aulas: [
-    { titulo: "Aula 7", video: "https://www.youtube.com/embed/u2ah9tWTkmk?si=L0YyGU18hxTghFOR" },
+    { titulo: "TEMA 7 - Assédios: identificando situações", video: "https://www.youtube.com/embed/NlrvhGVf6QA?si=qaj482I7tb5wzPGp" },
       
     ]
   }

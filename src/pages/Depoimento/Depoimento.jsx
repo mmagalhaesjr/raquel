@@ -37,23 +37,23 @@ export default function Depoimento() {
                 <section id="cxDepoimentos">
 
                     <h3>DEPOIMENTOS</h3>
-                    
-                  <Swiper
-  modules={[EffectCreative, Navigation, Pagination, A11y]}
-  navigation
-  pagination={{ clickable: true }} // ✅ ISSO AQUI resolve
-  grabCursor={true}
-  effect={'creative'}
-  creativeEffect={{
-    prev: {
-      shadow: true,
-      translate: [0, 0, -400],
-    },
-    next: {
-      translate: ['100%', 0, 0],
-    },
-  }}
->
+
+                    <Swiper
+                        modules={[EffectCreative, Navigation, Pagination, A11y]}
+                        navigation
+                        pagination={{ clickable: true }} // ✅ ISSO AQUI resolve
+                        grabCursor={true}
+                        effect={'creative'}
+                        creativeEffect={{
+                            prev: {
+                                shadow: true,
+                                translate: [0, 0, -400],
+                            },
+                            next: {
+                                translate: ['100%', 0, 0],
+                            },
+                        }}
+                    >
 
 
                         {Depoimentos.map((dep) => (
@@ -74,18 +74,9 @@ export default function Depoimento() {
                             </SwiperSlide>
                         ))}
 
-
-
-
                     </Swiper>
 
-
-
-
                 </section>
-
-
-
 
                 <h2>
                     Quando o treinamento sobre diversidade é parte da estratégia de negócios:

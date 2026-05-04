@@ -168,6 +168,7 @@ export const StyledDepoimento = styled.section`
   #descricao {
     width: 95%;
     text-align: center;
+
     margin: 0 auto;
     color: #555;
     font-size: 0.9rem;
@@ -226,7 +227,7 @@ export const StyledDepoimento = styled.section`
     height: 250px;
     background: #6b6b6b;
     color: white;
-    text-align: center;
+    text-align: justify;
     position: relative;
 
   }
