@@ -148,6 +148,9 @@ export const AulaButton = styled.button`
   &:hover { background: #e5e7eb; }
 
  
+  text-align: left;
+
+ 
 
 `;
 

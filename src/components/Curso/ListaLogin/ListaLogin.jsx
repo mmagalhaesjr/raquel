@@ -1,5 +1,9 @@
 export const cpfsAutorizados = [
   {
+    nome: "Raquel Timóteo",
+    cpf: "07103736600"
+  },
+  {
     nome: "ALEXANDRA GUERRA DA SILVA",
     cpf: "30555406890"
   },

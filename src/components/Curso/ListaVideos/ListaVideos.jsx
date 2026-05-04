@@ -3,7 +3,7 @@ export const modulos = [
   {
     nome: "Módulo 1",
     aulas: [
-      { titulo: "TEMA 1: Diversidade e vieses inconscientes como nascem os preconceitos", video: "https://www.youtube.com/embed/Jw_kvp5UVJU?si=on5LNq0XjTcQKOz9" },
+      { titulo: "TEMA 1: Diversidade e viéses inconscientes: como nascem os preconceitos", video: "https://www.youtube.com/embed/Jw_kvp5UVJU?si=on5LNq0XjTcQKOz9" },
       { titulo: "TEMA 2: (parte 1): Equidade de gênero", video: "https://www.youtube.com/embed/JEw27wuDbFA?si=RQTDxXqy8B23J5UT" },
       { titulo: "TEMA 2: (parte 2): Pensando a masculinidade", video: "https://www.youtube.com/embed/Ej6Rsb5ocZA?si=TmWtqC1Ky4Lccrwa" },
     ]
@@ -25,7 +25,7 @@ export const modulos = [
   {
     nome: "Módulo 4",
     aulas: [
-    { titulo: "TEMA 7 - Assédios: identificando situações", video: "https://www.youtube.com/embed/NlrvhGVf6QA?si=qaj482I7tb5wzPGp" },
+    { titulo: "TEMA 7: Assédios: identificando situações", video: "https://www.youtube.com/embed/NlrvhGVf6QA?si=qaj482I7tb5wzPGp" },
       
     ]
   }
