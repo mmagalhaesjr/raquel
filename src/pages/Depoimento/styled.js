@@ -211,6 +211,8 @@ export const StyledDepoimento = styled.section`
 
     .item {
       width: 100%;
+      margin-bottom: 5%;
+      
     }
      #descricao {
     width: 100%;
@@ -227,8 +229,8 @@ export const StyledDepoimento = styled.section`
     height: 250px;
     background: #6b6b6b;
     color: white;
-    text-align: justify;
     position: relative;
+    
 
   }
 
@@ -237,13 +239,26 @@ export const StyledDepoimento = styled.section`
       height: auto;
       margin-bottom: 5%;
       margin-bottom: 20%;
+      
     }
 
     #slider {
       flex-direction: column;
       gap: 20px;
+       padding: 2%;
       
     }
+      #descricao {
+    width: 95%;
+    text-align: justify;
+
+    margin: 0 auto;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    //border: solid 2px red;
+  
+  }
     
   }
 `;
