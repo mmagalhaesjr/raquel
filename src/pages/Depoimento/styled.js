@@ -8,7 +8,6 @@ export const StyledDepoimento = styled.section`
   
   background: ${fundo};
  
-  border: solid 5px blue;
   
 
   #container {
@@ -18,7 +17,7 @@ export const StyledDepoimento = styled.section`
     display:flex;
     flex-direction:column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content:center;
   }
 
 
@@ -29,8 +28,6 @@ export const StyledDepoimento = styled.section`
    
     color: white;
     text-align: center;
-
-    border: solid 2px red;;
   }
 
   .swiper-wrapper {
@@ -42,8 +39,6 @@ export const StyledDepoimento = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
-   border: solid 3px green;
 }
 
 
@@ -57,15 +52,6 @@ export const StyledDepoimento = styled.section`
     margin-bottom: 10px;
     letter-spacing: 2px;
   }
-
-  h2{
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 5%;
-  }
-
-
 
   #cxSlider {
     height: 250px;
@@ -114,13 +100,27 @@ export const StyledDepoimento = styled.section`
 
 
 //--------------------------------------------------------
+  h2{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
 
   #beneficios {
+    height: 150px;
     display: flex;
-    justify-content: space-between;
-    gap: 5%;
-    margin-bottom: 0%;
+    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
+    
+
+    
   }
 
   .item {
@@ -130,26 +130,25 @@ export const StyledDepoimento = styled.section`
     align-items: center;
     gap: 10px;
     color: #333;
-
   }
 
   .item p {
     font-size:.8rem;
-   // border: solid 2px red;
-  
   }
 
  
   #descricao {
     width: 95%;
-    text-align: center;
-
-    margin: 0 auto;
+    height: 150px;
+     
     color: #555;
     font-size: 0.9rem;
     line-height: 1.6;
-    //border: solid 2px red;
-  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   
@@ -170,19 +169,23 @@ export const StyledDepoimento = styled.section`
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
   }
 
   h2{
+    width: 95%;
+    height: 150px;
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 20px;
   }
 
-    #beneficios {
-      flex-direction: column;
-      align-items: center;
-    }
+  #beneficios {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+  }
 
     .item {
       width: 100%;
@@ -191,13 +194,14 @@ export const StyledDepoimento = styled.section`
     }
      #descricao {
     width: 100%;
-    margin: 0 auto;
+    height: auto;
     color: #555;
     font-size: 0.9rem;
     line-height: 1.6;
-    margin-top: 10%;
-
+    padding-top: 10%;
+     padding-bottom: 10%;
   }
+
 
     #cxDepoimentos {
     width: 95%;

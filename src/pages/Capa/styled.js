@@ -3,6 +3,7 @@ import { fundo } from '../../constants/Cores';
 
 export const StyledCapa = styled.main`
   width: 100%;
+  height: auto;
   background-color: ${fundo};
 
   display: flex;
@@ -10,16 +11,12 @@ export const StyledCapa = styled.main`
   align-items: center;
   justify-content: center;
 
-  border: solid 5px red;
-
   #container {
     width: 100%;
    
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-   // border: solid 5px red;
   }
 img{
   display: none;
@@ -30,10 +27,9 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    //border: solid 2px red;
   }
+
   #texto{
-      //border: solid 2px blue;
       text-align: center;
   }
 
@@ -53,14 +49,13 @@ img{
 
 
   @media (max-width: 900px) {
-    height: 100dvh;
+    height: auto;
+    margin-top: 50px;
+
    
   #container {
       flex-direction: column;
       text-align: center;
-      height: calc(100dvh); 
-      margin-top: 50px;
-    
   }
 
   img{
@@ -72,7 +67,7 @@ img{
    
   #cxTexto {
     width: 90%;
-    height: 40%;
+    margin-bottom: 5%;
 
     display: flex;
     flex-direction:row;
@@ -86,6 +81,7 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  
      
     }
 

@@ -13,8 +13,6 @@ export const StyledPalestras = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-
-    border: solid 5px red;
   
 
   #container {

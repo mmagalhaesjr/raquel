@@ -3,7 +3,7 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledContato = styled.section`
   width: 100%;
-  height: 90vh;
+  height: auto;
   
 
   display: flex;
@@ -13,10 +13,14 @@ export const StyledContato = styled.section`
 
   background-color: ${fundo};
 
-    border: solid 5px red;
-
   h2{
+    height: 100px;
     font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #container {
@@ -103,9 +107,7 @@ export const StyledContato = styled.section`
   @media (max-width: 900px) {
   height: auto;
 
-   h2{
-    margin-top: 20%;
-   }
+ 
 
     #container {
         display: flex;
