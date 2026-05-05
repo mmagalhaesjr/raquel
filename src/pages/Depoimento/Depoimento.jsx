@@ -58,7 +58,7 @@ export default function Depoimento() {
 
                         {Depoimentos.map((dep) => (
                             <SwiperSlide >
-                                <div key={dep.nome} id="slider">
+                                <div key={dep.nome} id="cxSlider">
 
 
                                     <div id="depoimento">

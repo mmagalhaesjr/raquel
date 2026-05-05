@@ -3,12 +3,12 @@ import { fundo } from "../../constants/Cores";
 
 export const StyledDepoimento = styled.section`
   width: 100%;
-  height: 100dvh;
+  height: auto;
   z-index: 0;
   
   background: ${fundo};
  
-
+  border: solid 5px blue;
   
 
   #container {
@@ -19,17 +19,43 @@ export const StyledDepoimento = styled.section`
     flex-direction:column;
     align-items: center;
     justify-content:space-evenly;
-   
-    
   }
 
 
   //--------------------------------------------------------Depoimento
+
+  #cxDepoimentos {
+    width: 80%;
+   
+    color: white;
+    text-align: center;
+
+    border: solid 2px red;;
+  }
+
+  .swiper-wrapper {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background: #6b6b6b;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+   border: solid 3px green;
+}
+
+
+
   h3{
     width: 100%;
+    height: 50px  ;
     text-align: center;
     font-size: 2rem;
     margin-top: 5%;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
   }
 
   h2{
@@ -38,23 +64,10 @@ export const StyledDepoimento = styled.section`
     font-size: 2rem;
     margin-top: 5%;
   }
-  #cxDepoimentos {
-    width: 80%;
-    height: 250px;
-    background: #6b6b6b;
-    color: white;
-    text-align: center;
-    position: relative;
-    
 
-  }
 
-  #cxDepoimentos h3 {
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-  }
 
-  #slider {
+  #cxSlider {
     height: 250px;
     display: flex;
     align-items: center;
@@ -91,44 +104,6 @@ export const StyledDepoimento = styled.section`
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   display: none;
-}
-
-.swiper {
-  width: 100%;
- height: 250px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.swiper-wrapper {
-  height: auto;
-  align-items: center;
-  background: #6b6b6b;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-
-}
-
-.swiper-slide {
-    width: 100%;
-    height: 250px;
-    color: #fff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-.swiper-pagination-bullet {
-  background: #fff;
-  opacity: 0.5;
 }
 
 .swiper-pagination-bullet-active {
@@ -226,12 +201,10 @@ export const StyledDepoimento = styled.section`
 
     #cxDepoimentos {
     width: 95%;
-    height: 250px;
-    background: #6b6b6b;
+    height: auto;
+  
     color: white;
     position: relative;
-    
-
   }
 
     #depoimentos{
@@ -242,7 +215,7 @@ export const StyledDepoimento = styled.section`
       
     }
 
-    #slider {
+    #cxSlider {
       flex-direction: column;
       gap: 20px;
        padding: 2%;

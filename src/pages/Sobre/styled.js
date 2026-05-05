@@ -6,6 +6,8 @@ export const StyledSobre = styled.section`
   height:100dvh ;
   background-color: ${fundo};
 
+    border: solid 5px blue;
+
  
 
   #container {

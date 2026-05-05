@@ -10,6 +10,8 @@ export const StyledCapa = styled.main`
   align-items: center;
   justify-content: center;
 
+  border: solid 5px red;
+
   #container {
     width: 100%;
    

@@ -8,11 +8,12 @@ export const StyledContato = styled.section`
 
   display: flex;
   flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+  align-items: center;
+  justify-content: center;
 
   background-color: ${fundo};
+
+    border: solid 5px red;
 
   h2{
     font-size: 2rem;
@@ -53,7 +54,7 @@ export const StyledContato = styled.section`
     border: none;
     background: #e5e5e5;
     outline: none;
-     font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 
   textarea {
@@ -107,9 +108,6 @@ export const StyledContato = styled.section`
    }
 
     #container {
-    height: calc(100dvh - 50px); 
-    top:50px;
-
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -117,8 +115,6 @@ export const StyledContato = styled.section`
         padding: 4%;
         flex-direction: column;
         text-align: center;
-
-         overflow: scroll;
 
         //border: solid 2px red;
     }
