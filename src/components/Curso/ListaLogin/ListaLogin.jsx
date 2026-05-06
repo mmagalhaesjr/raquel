@@ -1,4 +1,8 @@
 export const cpfsAutorizados = [
+   {
+    nome: "usuario teste",
+    cpf: "12345678910"
+  },
   {
     nome: "Raquel Timóteo",
     cpf: "07103736600"
