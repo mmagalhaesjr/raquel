@@ -14,6 +14,7 @@ z-index: 1;
 
 .navList{
   width: 100%;
+  list-style: none;
 
   display: flex;
   align-items: center;
