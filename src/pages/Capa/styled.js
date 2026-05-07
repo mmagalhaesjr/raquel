@@ -38,11 +38,11 @@ img{
   }
 
   h2 {
-    font-size: clamp(2rem, 10vw, 7rem);
+    font-size: clamp(1.5rem, 10vw, 7rem);
     margin-bottom: 10px;
   }
   h3{
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.4rem, 5vw, 2.8rem);
   }
 
   p {
@@ -88,7 +88,6 @@ img{
     justify-content: center;
   }
   #texto {
-     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
