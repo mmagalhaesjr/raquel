@@ -31,18 +31,31 @@ img{
 
   #texto{
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
   }
 
   h2 {
     font-size: clamp(2rem, 10vw, 7rem);
     margin-bottom: 10px;
   }
+  h3{
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
 
   p {
+    width: 90%;
     font-size: 1.2rem;
-    max-width: 500px;
     text-align: center;
     line-height: 1.5;
+    margin-top: 20px;
+
+     display: flex;
+    align-items: center;
+    justify-content: center;
+
     
   }
 

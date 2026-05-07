@@ -15,10 +15,15 @@ export default function Capa() {
 
                 <div id='cxTexto'>
                     <div id='texto'>
-                        <h2>Raquel <br></br>Timoteo</h2>
+                        <h2>Raquel Timoteo</h2>
+                        <h3>
+                            Palestras  e Treinamentos Corporativos
+                        </h3>
                         <p>
-                           palestras  e treinamentos corporativos 
+                            Desnaturalizar violências, ampliar o possível:
+                            Onde há diversidade, há transformação.
                         </p>
+
                     </div>
 
                 </div>
