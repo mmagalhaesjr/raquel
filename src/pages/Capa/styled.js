@@ -42,15 +42,15 @@ img{
     margin-bottom: 10px;
   }
   h3{
-    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-size: clamp(1.4rem, 5vw, 2.3rem);
   }
 
   p {
     width: 70%;
     font-size: 1.2rem;
-    text-align: j;
+    text-align: center;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 30px;
 
      display: flex;
     align-items: center;
