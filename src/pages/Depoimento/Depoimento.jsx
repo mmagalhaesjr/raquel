@@ -39,29 +39,22 @@ export default function Depoimento() {
                     <h3>DEPOIMENTOS</h3>
 
                     <Swiper
-                        modules={[EffectCreative, Navigation, Pagination, A11y]}
+                        modules={[Navigation, Pagination, A11y]}
                         navigation
-                        pagination={{ clickable: true }} // ✅ ISSO AQUI resolve
+                        pagination={{ clickable: true }}
                         grabCursor={true}
-                        effect={'creative'}
-                        creativeEffect={{
-                            prev: {
-                                shadow: true,
-                                translate: [0, 0, -400],
-                            },
-                            next: {
-                                translate: ['100%', 0, 0],
-                            },
-                        }}
+                        slidesPerView={1}
+                        observer={true}
+                        observeParents={true}
                     >
 
 
                         {Depoimentos.map((dep) => (
-                            <SwiperSlide >
-                                <div key={dep.nome} id="cxSlider">
+                            <SwiperSlide key={dep.nome}  >
+                                <div id="cxSlider">
 
 
-                                    <div id="depoimento">
+                                    <div className="depoimento">
 
                                         <p>{dep.texto}</p>
 

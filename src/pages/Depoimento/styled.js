@@ -12,7 +12,7 @@ export const StyledDepoimento = styled.section`
 
   #container {
     width: 100%;
-    height: 100%;
+     min-height: 100%;
     
     display:flex;
     flex-direction:column;
@@ -30,16 +30,7 @@ export const StyledDepoimento = styled.section`
     text-align: center;
   }
 
-  .swiper-wrapper {
-  width: 100%;
-  height: auto;
-  align-items: center;
-  background: #6b6b6b;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
 
 
@@ -53,29 +44,41 @@ export const StyledDepoimento = styled.section`
     letter-spacing: 2px;
   }
 
-  #cxSlider {
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+ #cxSlider {
+  width: 100%;
+  min-height: 250px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
-  #depoimento {
+  .depoimento {
     max-width: 600px;
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
-  #depoimento p {
+  .depoimento p {
+  
     margin-bottom: 20px;
     font-style: italic;
   }
 
-  #depoimento span {
+  .depoimento span {
     display: block;
     font-weight: bold;
   }
 
-  #depoimento small {
+  .depoimento small {
     opacity: 0.8;
   }
 
@@ -152,7 +155,17 @@ export const StyledDepoimento = styled.section`
   }
 
   
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
 
  
   @media (max-width: 900px) {
@@ -211,7 +224,7 @@ export const StyledDepoimento = styled.section`
     position: relative;
   }
 
-    #depoimentos{
+    .depoimentos{
       width: 100%;
       height: auto;
       margin-bottom: 5%;
@@ -222,7 +235,7 @@ export const StyledDepoimento = styled.section`
     #cxSlider {
       flex-direction: column;
       gap: 20px;
-       padding: 2%;
+       padding: 5%;
       
     }
       #descricao {

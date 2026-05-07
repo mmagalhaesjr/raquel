@@ -17,8 +17,7 @@ export default function Capa() {
                     <div id='texto'>
                         <h2>Raquel <br></br>Timoteo</h2>
                         <p>
-                            Desnaturalizar violências, ampliar o possível:
-                            Onde há diversidade, há transformação.
+                           palestras  e treinamentos corporativos 
                         </p>
                     </div>
 
