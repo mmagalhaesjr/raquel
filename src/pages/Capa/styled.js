@@ -42,13 +42,13 @@ img{
     margin-bottom: 10px;
   }
   h3{
-    font-size: clamp(1.4rem, 5vw, 2.8rem);
+    font-size: clamp(1.4rem, 5vw, 2rem);
   }
 
   p {
-    width: 90%;
+    width: 70%;
     font-size: 1.2rem;
-    text-align: center;
+    text-align: j;
     line-height: 1.5;
     margin-top: 20px;
 
