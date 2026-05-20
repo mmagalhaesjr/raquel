@@ -16,8 +16,6 @@ export const StyledGaleria = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-
-   
   }
 
   #container img {
@@ -62,11 +60,28 @@ export const StyledGaleria = styled.div`
 
 
   @media (max-width:900px) {
-     margin-top:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ 
+
+    #container {
+    width: 90%;
+    margin-top: 50px;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+  }
 
      #container img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     padding: 10px;
     object-fit: cover;
     cursor: pointer;
