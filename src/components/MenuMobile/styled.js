@@ -47,6 +47,7 @@ export const StyledMenuMobile = styled.div`
     border: none;
     background: transparent;
     cursor: pointer;
+    font-weight: bold;
 
     padding: 20px 30px;
     font-size: 16px; 

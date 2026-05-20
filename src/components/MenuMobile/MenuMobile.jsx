@@ -20,7 +20,7 @@ export default function MenuMobile({ mobile, setMobile }) {
                 <button onClick={() => scrollTo("palestra")}>PALESTRAS</button>
                 <button onClick={() => scrollTo("depoimento")}>DEPOIMENTOS</button>
                 <button onClick={() => scrollTo("contato")}>CONTATO</button>
-
+                <a href="/galeria">GALERIA</a>
                 <a href="/curso">ÁREA DO ALUNO</a>
 
             </nav>
