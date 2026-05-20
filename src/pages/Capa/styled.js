@@ -43,6 +43,7 @@ img{
   }
   h3{
     font-size: clamp(1.4rem, 5vw, 2.3rem);
+    color:#535252;
   }
 
   p {

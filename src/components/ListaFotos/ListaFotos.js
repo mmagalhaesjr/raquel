@@ -1,0 +1,85 @@
+import foto1 from '../../assets/galeriaFotos/1.jpeg';
+import foto2 from '../../assets/galeriaFotos/2.jpeg';
+import foto3 from '../../assets/galeriaFotos/3.jpeg';
+import foto4 from '../../assets/galeriaFotos/4.jpeg';
+import foto5 from '../../assets/galeriaFotos/5.jpeg';
+import foto6 from '../../assets/galeriaFotos/6.jpeg';
+import foto7 from '../../assets/galeriaFotos/7.jpeg';
+import foto8 from '../../assets/galeriaFotos/8.jpeg';
+import foto9 from '../../assets/galeriaFotos/9.jpeg';
+import foto10 from '../../assets/galeriaFotos/10.jpeg';
+import foto11 from '../../assets/galeriaFotos/11.jpeg';
+import foto12 from '../../assets/galeriaFotos/12.jpeg';
+import foto13 from '../../assets/galeriaFotos/13.jpeg';
+import foto14 from '../../assets/galeriaFotos/14.jpeg';
+import foto15 from '../../assets/galeriaFotos/15.jpeg';
+import foto16 from '../../assets/galeriaFotos/16.jpeg';
+import foto17 from '../../assets/galeriaFotos/17.jpeg';
+import foto18 from '../../assets/galeriaFotos/18.jpeg';
+import foto19 from '../../assets/galeriaFotos/19.jpeg';
+import foto20 from '../../assets/galeriaFotos/20.jpeg';
+import foto21 from '../../assets/galeriaFotos/21.jpeg';
+import foto22 from '../../assets/galeriaFotos/22.jpeg';
+import foto23 from '../../assets/galeriaFotos/23.jpeg';
+import foto24 from '../../assets/galeriaFotos/24.jpeg';
+import foto25 from '../../assets/galeriaFotos/25.jpeg';
+import foto26 from '../../assets/galeriaFotos/26.jpeg';
+import foto27 from '../../assets/galeriaFotos/27.jpeg';
+import foto28 from '../../assets/galeriaFotos/28.jpeg';
+import foto29 from '../../assets/galeriaFotos/29.jpeg';
+import foto30 from '../../assets/galeriaFotos/30.jpeg';
+import foto31 from '../../assets/galeriaFotos/31.jpeg';
+import foto32 from '../../assets/galeriaFotos/32.jpeg';
+import foto33 from '../../assets/galeriaFotos/33.jpeg';
+import foto34 from '../../assets/galeriaFotos/34.jpeg';
+import foto35 from '../../assets/galeriaFotos/35.jpeg';
+import foto36 from '../../assets/galeriaFotos/36.jpeg';
+import foto37 from '../../assets/galeriaFotos/37.jpeg';
+import foto38 from '../../assets/galeriaFotos/38.jpeg';
+import foto39 from '../../assets/galeriaFotos/39.jpeg';
+import foto40 from '../../assets/galeriaFotos/40.jpeg';
+import foto41 from '../../assets/galeriaFotos/41.jpeg';
+
+export const ListaFotos = [
+  { img: foto1 },
+  { img: foto2 },
+  { img: foto3 },
+  { img: foto4 },
+  { img: foto5 },
+  { img: foto6 },
+  { img: foto7 },
+  { img: foto8 },
+  { img: foto9 },
+  { img: foto10 },
+  { img: foto11 },
+  { img: foto12 },
+  { img: foto13 },
+  { img: foto14 },
+  { img: foto15 },
+  { img: foto16 },
+  { img: foto17 },
+  { img: foto18 },
+  { img: foto19 },
+  { img: foto20 },
+  { img: foto21 },
+  { img: foto22 },
+  { img: foto23 },
+  { img: foto24 },
+  { img: foto25 },
+  { img: foto26 },
+  { img: foto27 },
+  { img: foto28 },
+  { img: foto29 },
+  { img: foto30 },
+  { img: foto31 },
+  { img: foto32 },
+  { img: foto33 },
+  { img: foto34 },
+  { img: foto35 },
+  { img: foto36 },
+  { img: foto37 },
+  { img: foto38 },
+  { img: foto39 },
+  { img: foto40 },
+  { img: foto41 },
+];
