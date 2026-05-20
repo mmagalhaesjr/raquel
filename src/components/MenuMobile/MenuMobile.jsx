@@ -1,34 +1,51 @@
 import { StyledMenuMobile } from "./styled";
 import PropTypes from "prop-types";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export default function MenuMobile({ mobile, setMobile }) {
+  function fecharMenu() {
+    setMobile("fechado");
+  }
 
-    const scrollTo = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-            setMobile('fechado');
-        }
-    };
+  return (
+    <StyledMenuMobile mobile={mobile}>
+      <nav className="nav-lista">
 
-    return (
-        <StyledMenuMobile mobile={mobile}>
-            <nav className="nav-lista">
+        <HashLink smooth to="/#home" onClick={fecharMenu}>
+          HOME
+        </HashLink>
 
-                <button onClick={() => scrollTo("home")}>HOME</button>
-                <button onClick={() => scrollTo("sobre")}>SOBRE</button>
-                <button onClick={() => scrollTo("palestra")}>PALESTRAS</button>
-                <button onClick={() => scrollTo("depoimento")}>DEPOIMENTOS</button>
-                <button onClick={() => scrollTo("contato")}>CONTATO</button>
-                <a href="/galeria">GALERIA</a>
-                <a href="/curso">ÁREA DO ALUNO</a>
+        <HashLink smooth to="/#sobre" onClick={fecharMenu}>
+          SOBRE
+        </HashLink>
 
-            </nav>
-        </StyledMenuMobile>
-    );
+        <HashLink smooth to="/#palestra" onClick={fecharMenu}>
+          PALESTRAS
+        </HashLink>
+
+        <HashLink smooth to="/#depoimento" onClick={fecharMenu}>
+          DEPOIMENTOS
+        </HashLink>
+
+        <HashLink smooth to="/#contato" onClick={fecharMenu}>
+          CONTATO
+        </HashLink>
+
+        <Link to="/galeria" onClick={fecharMenu}>
+          GALERIA
+        </Link>
+
+        <Link to="/curso" onClick={fecharMenu}>
+          ÁREA DO ALUNO
+        </Link>
+
+      </nav>
+    </StyledMenuMobile>
+  );
 }
 
 MenuMobile.propTypes = {
-    mobile: PropTypes.string.isRequired,
-    setMobile: PropTypes.func.isRequired,
+  mobile: PropTypes.string.isRequired,
+  setMobile: PropTypes.func.isRequired,
 };
