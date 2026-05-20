@@ -16,6 +16,8 @@ export const StyledGaleria = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+
+   
   }
 
   #container img {
@@ -56,5 +58,23 @@ export const StyledGaleria = styled.div`
     max-height: 90vh;
 
     border-radius: 10px;
+  }
+
+
+  @media (max-width:900px) {
+     margin-top:0px;
+
+     #container img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
   }
 `;
