@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { fundo } from "../../constants/Cores";
 import { Star } from 'lucide-react';
+import { Button } from '../Curso/styled';
 
 export const StyledPalestras = styled.section`
   width: 100%;
@@ -13,6 +14,8 @@ export const StyledPalestras = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+   
   
 
   #container {
@@ -67,12 +70,49 @@ export const StyledPalestras = styled.section`
     color: #222;
   }
 
-  .card p {
+  .card  {
     font-size: 0.75rem;
     color: #555;
     line-height: 1.4;
      text-align: justify;
   }
+
+  button{
+    cursor: pointer;
+    /* border: solid 2px #979595; */
+    border: none;
+    padding: 2px;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-left: -20px;
+  }
+
+/* ul {
+  ${({ abrir }) => 
+    abrir ? "display: none;" : "display: block;"}
+} */
+
+  li {
+  display: none;
+}
+
+ul{
+  padding-left: 20px;
+}
+
+
+ul.ativo li {
+ display: list-item;
+  list-style-type: disc;
+  margin-top: 5px;
+}
+
+   li{
+     font-size: 0.75rem;
+    color: #555;
+    line-height: 1.7;
+     text-align: justify;
+   }
 
   /* 📱 RESPONSIVO */
   @media (max-width: 1024px) {
