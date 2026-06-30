@@ -28,13 +28,13 @@ export default function MenuMobile({ mobile, setMobile }) {
           DEPOIMENTOS
         </HashLink>
 
+        <Link to="/cursocompleto" onClick={fecharMenu}>
+          CURSOS
+        </Link>
+
         <HashLink smooth to="/#contato" onClick={fecharMenu}>
           CONTATO
         </HashLink>
-
-        <Link to="/galeria" onClick={fecharMenu}>
-          GALERIA
-        </Link>
 
         <Link to="/curso" onClick={fecharMenu}>
           ÁREA DO ALUNO

@@ -82,16 +82,16 @@ export default function Header() {
             </HashLink>
           </li>
 
+            <li>
+            <Link to="/cursocompleto">
+              CURSOS
+            </Link>
+          </li>
+
           <li>
             <HashLink smooth to="/#contato">
               CONTATO
             </HashLink>
-          </li>
-
-          <li>
-            <Link to="/galeria">
-              GALERIA
-            </Link>
           </li>
 
           <li>
