@@ -3,20 +3,26 @@ import styled from "styled-components";
 export const StyledCursoCompleto = styled.div`
   width: 100%;
   min-height: 100vh;
-  padding: 120px 0 50px;
+  padding-top: 100px;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  #imgInicial {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   #container {
-    width: min(1400px, 95%);
+    width: 90%;
+    margin: 5% 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-
-    /* border: 2px solid red; */
   }
 
   h1 {
@@ -26,76 +32,41 @@ export const StyledCursoCompleto = styled.div`
 
   h2 {
     font-size: 1.3rem;
-    line-height: 1.7;
-    text-align: center;
+    line-height: 1.8;
+    text-align: justify;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6;
-    text-align: center;
-  }
-
-  #containerCxTexto {
-    width: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-
-    /* border: 3px solid blue; */
-  }
-
-  #cxTexto {
-    width: 300px;
-    min-height: 430px;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    text-align: center;
-  }
-
-  #cxTexto img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  h4 {
-    font-size: 1.1rem;
     font-weight: bold;
-    line-height: 1.4;
+    text-align: center;
   }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
+  a {
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
-  /* ---------- Notebook ---------- */
+  a:hover {
+    background: #000;
+    color: #fff;
+  }
 
-  @media (max-width: 1200px) {
-    #cxTexto {
-      width: 45%;
+  /* ================= TABLET ================= */
+
+  @media (max-width: 992px) {
+    #container {
+      width: 95%;
+      gap: 25px;
     }
-  }
 
-  /* ---------- Tablet ---------- */
-
-  @media (max-width: 768px) {
     h1 {
-      font-size: 1.9rem;
+      font-size: 2rem;
     }
 
     h2 {
@@ -103,57 +74,202 @@ export const StyledCursoCompleto = styled.div`
     }
 
     h3 {
-      font-size: 1.05rem;
-    }
-
-    #cxTexto {
-      width: 100%;
-      max-width: 500px;
-      min-height: auto;
-    }
-
-    #cxTexto img {
-      height: 220px;
+      font-size: 1.15rem;
     }
   }
 
-  /* ---------- Celular ---------- */
+  /* ================= CELULAR ================= */
+
+  @media (max-width: 768px) {
+    padding-top: 70px;
+
+    #container {
+      width: 94%;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    a {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      padding: 14px;
+    }
+  }
+
+  /* ================= CELULARES PEQUENOS ================= */
 
   @media (max-width: 480px) {
-    padding-top: 100px;
+    padding-top: 55px;
 
     #container {
       width: 92%;
     }
 
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.55rem;
     }
 
     h2 {
-      font-size: 1rem;
-      text-align: justify;
+      font-size: .95rem;
     }
 
     h3 {
       font-size: 1rem;
-      text-align: justify;
+    }
+  }
+`;
+
+export const StyledMeio = styled.section`
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .card {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 35px;
+  }
+
+  .card.invertido {
+    flex-direction: row-reverse;
+  }
+
+  .cxTexto {
+    width: 50%;
+    min-height: 400px;
+    padding: 40px;
+    background: #cec9c9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cxImg {
+    width: 50%;
+    min-height: 400px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h4 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  p {
+    width: 100%;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  /* ================= NOTEBOOK ================= */
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+
+  /* ================= TABLET ================= */
+
+  @media (max-width: 992px) {
+    width: 95%;
+
+    .card,
+    .card.invertido {
+      flex-direction: column;
+    }
+
+    .cxTexto,
+    .cxImg {
+      width: 100%;
+    }
+
+    .cxImg {
+      height: 350px;
+      min-height: 350px;
+    }
+
+    .cxTexto {
+      min-height: auto;
+      padding: 35px;
     }
 
     h4 {
-      font-size: 1rem;
+      font-size: 1.8rem;
     }
 
     p {
-      font-size: 0.95rem;
+      font-size: 1.05rem;
+    }
+  }
+
+  /* ================= CELULAR ================= */
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    .card {
+      margin-bottom: 40px;
     }
 
-    #cxTexto {
-      padding: 15px;
+    .cxImg {
+      height: 260px;
+      min-height: 260px;
     }
 
-    #cxTexto img {
-      height: 180px;
+    .cxTexto {
+      padding: 25px 20px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+
+  /* ================= CELULARES PEQUENOS ================= */
+
+  @media (max-width: 480px) {
+    .cxImg {
+      height: 220px;
+      min-height: 220px;
+    }
+
+    .cxTexto {
+      padding: 20px 15px;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: .95rem;
     }
   }
 `;

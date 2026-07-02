@@ -1,10 +1,12 @@
 
 import { StyledPalestras } from "./styled";
 
-import img1 from "../../assets/palestras/img1.png";
-import img2 from "../../assets/palestras/img2.png";
-import img3 from "../../assets/palestras/img3.png";
-import img4 from "../../assets/palestras/img4.png";
+import img1 from '../../assets/galeriaFotos/44.jpeg'
+import img2 from "../../assets/galeriaFotos/6.jpeg";
+import img3 from "../../assets/galeriaFotos/5.jpeg";
+import img4 from "../../assets/galeriaFotos/42-2.jpeg";
+
+
 import { useNavigate } from "react-router-dom";
 import { PiKeyReturnLight } from "react-icons/pi";
 import { useState } from "react";
@@ -36,7 +38,7 @@ export default function Palestras() {
         <div id="cxCards">
 
           <div className="card">
-            <img src={img1} alt="" />
+            <img src={img1} alt="img" />
             <h3>Equidade de gênero e diversidade sexual e identidade de gênero</h3>
             <p>
               Este tema propõe uma reflexão critica sobre os desatos enfrentados pelas mulheres no mercado do itabalho, abordando estereótipos de gênero, padrões sociais e desigualdades estruturais. Da mesma forma aborda questões sobre a comunidade LGBTQIAPN+ e suas vulnerabilidades em ambientes corporativos, mas também em sociedade. A partir de temas como autoestima, cultura, carreira e expressão de identidade os encontros convidam ao dialogo sobre respeito, inclusão e construção de ambientes mais Justos e diversos.
@@ -60,7 +62,7 @@ export default function Palestras() {
           </div>
 
           <div className="card">
-            <img src={img2} alt="" />
+            <img src={img2} alt="img" />
             <h3>Etarismo e capacitismo</h3>
             <p>
               A proposta deste tema é ampliar o olhar sobre idade e deficiência no contexto profissional, questionando preconceitos e estigmas que limitam oportunidades. A palestra aborda como são formados alguns preconceitos e como eles influenciam percepções sobre capacidade, produtividade e pertencimento, incentivando uma cultura mais inclusiva e que valorize a diversidade em todas as suas formas.
@@ -78,7 +80,7 @@ export default function Palestras() {
           </div>
 
           <div className="card">
-            <img src={img3} alt="" />
+            <img src={img3} alt="img" />
             <h3>Relações étnico-raciais</h3>
             <p>
               Um espaço de análise e conscientização sobre o racismo estrutural e o papel da branquitude na perpetuação das desigualdades racial no Brasil, dentro e fora dos espaços de trabalho. A palestra discute como os vieses inconscientes de raça se formam e impactam decisões e comportamentos, além de provocar reflexões sobre a responsabilidade individual e coletiva na construção de práticas antirracistas nas organizações.
@@ -97,7 +99,7 @@ export default function Palestras() {
 
 
           <div className="card">
-            <img src={img4} alt="" />
+            <img src={img4} alt="img" />
             <h3>Assédios no ambiente de trabalho</h3>
             <p>
               O tema trata das diversas formas de assédio no ambiente profissional, unindo teoria e prática para identificação e enfrentamento dessas situações. Com foco em parâmetros legais, conceitos técnicos  e responsabilidade coletiva, as palestras sobre esse tema buscam oferecer repertório teórico-prático para o combate de violências  e a construção de ambientes seguros, respeitosos e livres de assédios.
@@ -117,6 +119,7 @@ export default function Palestras() {
 
         </div>
       </section>
+
     </StyledPalestras>
   );
 }

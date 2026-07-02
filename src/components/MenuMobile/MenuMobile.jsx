@@ -32,6 +32,10 @@ export default function MenuMobile({ mobile, setMobile }) {
           CURSOS
         </Link>
 
+        <Link to="/galeria">
+          GALERIA
+        </Link>
+
         <HashLink smooth to="/#contato" onClick={fecharMenu}>
           CONTATO
         </HashLink>

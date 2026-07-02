@@ -5,8 +5,7 @@ import { Button } from '../Curso/styled';
 
 export const StyledPalestras = styled.section`
   width: 100%;
-  height: 100vh;
-  
+ 
   background-color: ${fundo};
   padding: 5%;
 
@@ -14,6 +13,7 @@ export const StyledPalestras = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
 
    
   
@@ -27,6 +27,8 @@ export const StyledPalestras = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+  
   }
 
 
@@ -59,7 +61,7 @@ export const StyledPalestras = styled.section`
 
   .card img {
     width: 100%;
-    height: 140px;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 10px;
   }

@@ -6,7 +6,23 @@ import Sobre from '../Sobre/Sobre';
 import Palestras from '../Palestras/Palestras';
 import Contato from '../Contato/Contato';
 import Depoimento from '../Depoimento/Depoimento';
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 export default function Home() {
+
+    const location = useLocation();
+
+useEffect(() => {
+  if (location.state?.scrollToFooter) {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  }
+}, [location]);
+
     return (
         <StyledHome>
 
