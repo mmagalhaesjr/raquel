@@ -1,206 +1,53 @@
-export const cpfsAutorizados = [
-   {
-    nome: "usuario teste",
-    cpf: "12345678910"
-  },
-  {
-    nome: "Raquel Timóteo",
-    cpf: "07103736600"
-  },
-  {
-    nome: "ALEXANDRA GUERRA DA SILVA",
-    cpf: "30555406890"
-  },
-  {
-    nome: "ANA ANGELICA MARQUES ",
-    cpf: "22687195880"
-  },
-  {
-    nome: "ANDRESSA MINAMI",
-    cpf: "31417178850"
-  },
-  {
-    nome: "CINTHIA DAMARIS ANDRADE BEZERRA",
-    cpf: "40762577827"
-  },
-  {
-    nome: "CLEIDE GUERRA",
-    cpf: "18693179802"
-  },
-  {
-    nome: "SILVIA DA SILVA DIAS",
-    cpf: "27026950860"
-  },
-  {
-    nome: "ELDO RODRIGUES DA PAIXAO FILHO",
-    cpf: "39722109812"
-  },
-  {
-    nome: "ELENI DE SOUZA RAMOS",
-    cpf: "37246427848"
-  },
-  {
-    nome: "GEISA ARAUJO DA COSTA",
-    cpf: "33358327876"
-  },
-  {
-    nome: "GERSON MENDES DE ALMEIDA",
-    cpf: "02318481881"
-  },
-  {
-    nome: "HIGOR AUGUSTO MELO DOS REIS NOVAIS",
-    cpf: "23001503874"
-  },
-  {
-    nome: "JESSICA BRETAS DA SILVA",
-    cpf: "23042336867"
-  },
-  {
-    nome: "JESSICA DOMINGOS LOPES",
-    cpf: "37523831869"
-  },
-  {
-    nome: "JULIANA DAS GRACAS TORRES MELCHIOR",
-    cpf: "33617975860"
-  },
-  {
-    nome: "KARLA REGINA SANTOS ALCANTARA",
-    cpf: "41432947885"
-  },
-  {
-    nome: "LALIAN SILVA DE SOUSA",
-    cpf: "40609679805"
-  },
-  {
-    nome: "LENICE DA PENHA MARTINS",
-    cpf: "08720650817"
-  },
-  {
-    nome: "LUANA DE MELO OMENA",
-    cpf: "37861858839"
-  },
-  {
-    nome: "LUANDA RODRIGUES DA SILVA",
-    cpf: "25806600890"
-  },
-  {
-    nome: "LUCIA MARA BARBOZA ALVES",
-    cpf: "18695700810"
-  },
-  {
-    nome: "LUCIMARA CRISTINA MOREIRA",
-    cpf: "19227641831"
-  },
-  {
-    nome: "ALINE CONDE PIMENTEL",
-    cpf: "32822893837"
-  },
-  {
-    nome: "MARCIA RODRIGUES",
-    cpf: "29060579836"
-  },
-  {
-    nome: "MARILIA FLAVIA DE SOUSA",
-    cpf: "04335731477"
-  },
-  {
-    nome: "PRISCILA MENDES DA SILVA",
-    cpf: "31678333867"
-  },
-  {
-    nome: "RENATA DA SILVA SANTOS",
-    cpf: "35390101812"
-  },
-  {
-    nome: "ROSALIA PERES GONCALVES",
-    cpf: "30755270843"
-  },
-  {
-    nome: "ROSALINA GUERRA MEDINA",
-    cpf: "07564245859"
-  },
-  {
-    nome: "SANDRA FEITOSA DOS SANTOS",
-    cpf: "32970825856"
-  },
-  {
-    nome: "SHIRLEI SANTOS VELHO",
-    cpf: "28688832811"
-  },
-  {
-    nome: "DANIELA DE JESUS SILVA",
-    cpf: "29722354876"
-  },
-  {
-    nome: "VALERIA DELPHINO",
-    cpf: "16154964838"
-  },
-  {
-    nome: "VANESSA DE SOUSA CASTRO SILVA",
-    cpf: "31335706844"
-  },
-  {
-    nome: "VERONICA APARECIDA PINTO",
-    cpf: "27915860836"
-  },
-  {
-    nome: "HEITOR BRAZ DE OLIVEIRA",
-    cpf: "34574904810"
-  },
-  {
-    nome: "CIBELE VIEIRA LIMA",
-    cpf: "33325602800"
-  },
-  {
-    nome: "MONICA MARINETE DA SILVA",
-    cpf: "19861132805"
-  },
-  {
-    nome: "MARIA ANA THEODORO",
-    cpf: "04811121899"
-  },
-  {
-    nome: "MARIA DE FATIMA DA SILVA",
-    cpf: "19861004807"
-  },
-  {
-    nome: "FLAVIA DA SILVA OLIVEIRA",
-    cpf: "18609992802"
-  },
-  {
-    nome: "EDNEIDE SOARES DA SILVA SEVERIANO",
-    cpf: "29926623808"
-  },
-  {
-    nome: "JOSE LUIZ DE LIMA",
-    cpf: "12670527833"
-  },
-  {
-    nome: "VANESSA DO NASCIMENTO LEAL",
-    cpf: "28489426813"
-  },
-  {
-    nome: "DAILZA ROSA DA ROCHA PEREIRA",
-    cpf: "12420134826"
-  },
-  {
-    nome: "LUCAS RUIZ PEREZ",
-    cpf: "42791397841"
-  },
-  {
-    nome: "SILVANA APARECIDA TEIXEIRA BOGARO",
-    cpf: "14389402897"
-  },
-  {
-    nome: "KELLY CRISTINA GONCALVES NUNES",
-    cpf: "38150361863"
-  },
-  {
-    nome: "ALINE AFFONSO DE SIQUEIRA",
-    cpf: "32675795895"
-  },
-  {
-    nome: "RODOLPHO AUGUSTO DA SILVA MARTINS",
-    cpf: "35678153854"
-  }
-]
+export const usuariosAutorizados = [
+  { nome: "Usuario", codigo: "diversidade8910" },
+  { nome: "Raquel", codigo: "diversidade6600" },
+  { nome: "Alexandra", codigo: "diversidade6890" },
+  { nome: "Ana", codigo: "diversidade5880" },
+  { nome: "Andressa", codigo: "diversidade8850" },
+  { nome: "Cinthia", codigo: "diversidade7827" },
+  { nome: "Cleide", codigo: "diversidade9802" },
+  { nome: "Silvia", codigo: "diversidade0860" },
+  { nome: "Eldo", codigo: "diversidade9812" },
+  { nome: "Eleni", codigo: "diversidade7848" },
+  { nome: "Geisa", codigo: "diversidade7876" },
+  { nome: "Gerson", codigo: "diversidade1881" },
+  { nome: "Higor", codigo: "diversidade3874" },
+  { nome: "Jessica", codigo: "diversidade6867" },
+  { nome: "Jessica", codigo: "diversidade1869" },
+  { nome: "Juliana", codigo: "diversidade5860" },
+  { nome: "Karla", codigo: "diversidade7885" },
+  { nome: "Lalian", codigo: "diversidade9805" },
+  { nome: "Lenice", codigo: "diversidade0817" },
+  { nome: "Luana", codigo: "diversidade8839" },
+  { nome: "Luanda", codigo: "diversidade0890" },
+  { nome: "Lucia", codigo: "diversidade0810" },
+  { nome: "Lucimara", codigo: "diversidade1831" },
+  { nome: "Aline", codigo: "diversidade3837" },
+  { nome: "Marcia", codigo: "diversidade9836" },
+  { nome: "Marilia", codigo: "diversidade1477" },
+  { nome: "Priscila", codigo: "diversidade3867" },
+  { nome: "Renata", codigo: "diversidade1812" },
+  { nome: "Rosalia", codigo: "diversidade0843" },
+  { nome: "Rosalina", codigo: "diversidade5859" },
+  { nome: "Sandra", codigo: "diversidade5856" },
+  { nome: "Shirlei", codigo: "diversidade2811" },
+  { nome: "Daniela", codigo: "diversidade4876" },
+  { nome: "Valeria", codigo: "diversidade4838" },
+  { nome: "Vanessa", codigo: "diversidade6844" },
+  { nome: "Veronica", codigo: "diversidade0836" },
+  { nome: "Heitor", codigo: "diversidade4810" },
+  { nome: "Cibele", codigo: "diversidade2800" },
+  { nome: "Monica", codigo: "diversidade2805" },
+  { nome: "Maria", codigo: "diversidade1899" },
+  { nome: "Maria", codigo: "diversidade4807" },
+  { nome: "Flavia", codigo: "diversidade2802" },
+  { nome: "Edneide", codigo: "diversidade3808" },
+  { nome: "Jose", codigo: "diversidade7833" },
+  { nome: "Vanessa", codigo: "diversidade6813" },
+  { nome: "Dailza", codigo: "diversidade4826" },
+  { nome: "Lucas", codigo: "diversidade7841" },
+  { nome: "Silvana", codigo: "diversidade2897" },
+  { nome: "Kelly", codigo: "diversidade1863" },
+  { nome: "Aline", codigo: "diversidade5895" },
+  { nome: "Rodolpho", codigo: "diversidade3854" },
+];

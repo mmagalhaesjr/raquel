@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { cpfsAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
+import { usuariosAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
 import { modulos } from "../../components/Curso/ListaVideos/ListaVideos";
 
 import {
@@ -21,41 +21,32 @@ import {
 import { PiKeyReturnLight } from "react-icons/pi";
 
 export default function Curso() {
-  const [logado, setLogado] = useState(false);
-  const [nome, setNome] = useState("");
-  const [cpf, setCpf] = useState("");
+  const [logado, setLogado] = useState(
+    sessionStorage.getItem("cursoLogado") === "true"
+  );
+  const [nome, setNome] = useState(
+    sessionStorage.getItem("cursoNome") || ""
+  );
+  const [codigo, setCodigo] = useState("");
   const [aulaSelecionada, setAulaSelecionada] = useState(null);
   const [moduloAberto, setModuloAberto] = useState(null);
 
   const navigate = useNavigate();
 
-  function formatarCPF(valor) {
-    const numeros = valor.replace(/\D/g, "").slice(0, 11);
-
-    return numeros
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d{1,2})$/, "$1-$2")
-      .slice(0, 14);
-  }
-
   function handleLogin() {
-    const cpfLimpo = cpf.replace(/\D/g, "");
+    const codigoLimpo = codigo.trim().toLowerCase();
 
-    if (cpfLimpo.length !== 11) {
-      alert("CPF inválido");
-      return;
-    }
-
-    const usuario = cpfsAutorizados.find(
-      (pessoa) => pessoa.cpf === cpfLimpo
+    const usuario = usuariosAutorizados.find(
+      (pessoa) => pessoa.codigo === codigoLimpo
     );
 
     if (!usuario) {
-      alert("CPF não autorizado");
+      alert("Código inválido");
       return;
     }
 
+    sessionStorage.setItem("cursoLogado", "true");
+    sessionStorage.setItem("cursoNome", usuario.nome);
     setNome(usuario.nome);
     setLogado(true);
   }
@@ -72,14 +63,11 @@ export default function Curso() {
           <Card>
             <Title>Login do Curso</Title>
 
-
             <Input
-              type="text"
-              placeholder="Seu CPF"
-              value={cpf}
-              onChange={(e) =>
-                setCpf(formatarCPF(e.target.value))
-              }
+              type="password"
+              placeholder="Digite seu código de acesso"
+              value={codigo}
+              onChange={(e) => setCodigo(e.target.value)}
             />
 
             <Button onClick={handleLogin}>
