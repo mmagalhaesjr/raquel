@@ -10,6 +10,8 @@ export const StyledCurso = styled.div`
   justify-content: center;
   position: relative;
 
+ 
+
 
   #icone{
     color: #ffffff;
@@ -40,6 +42,8 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
 
+
+
   
 `;
 
@@ -59,6 +63,8 @@ export const Input = styled.input`
   margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+
+     
 `;
 
 export const Button = styled.button`

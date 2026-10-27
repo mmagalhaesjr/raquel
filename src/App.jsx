@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Curso from './pages/Curso/Curso';
 import Galeria from './pages/Galeria/Galeria';
 import CursoCompleto from './pages/CursoCompleto/CursoCompleto';
+import Certificado from './pages/Certificado/Certificado';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/curso" exact element={<Curso />} />
           <Route path="/galeria" exact element={<Galeria />} />
            <Route path="/cursocompleto" exact element={<CursoCompleto />} />
+            <Route path="/certificado" exact element={<Certificado />} />
 
         </Routes>
 
