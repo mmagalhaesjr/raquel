@@ -11,7 +11,6 @@ export const StyledCurso = styled.div`
   position: relative;
 
 
-
   #icone{
     color: #ffffff;
     font-size: 3rem;
@@ -41,7 +40,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
 
-   //border: solid 2px red;
+  
 `;
 
 
@@ -50,6 +49,8 @@ export const Title = styled.h1`
   font-size: 20px;
   margin-bottom: 16px;
   color: #534b4b;
+
+
 `;
 
 export const Input = styled.input`
@@ -98,6 +99,8 @@ export const Sidebar = styled.div`
   padding: 16px;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+   
  
 
   h2 {

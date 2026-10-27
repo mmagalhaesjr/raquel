@@ -9,6 +9,8 @@ export const StyledCursoCompleto = styled.div`
   flex-direction: column;
   align-items: center;
 
+
+
   #imgInicial {
     width: 100%;
     height: auto;
