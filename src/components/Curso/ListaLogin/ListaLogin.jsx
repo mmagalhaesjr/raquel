@@ -1,5 +1,5 @@
 export const usuariosAutorizados = [
-  { nome: "Usuario", codigo: "diversidade8910" },
+  { nome: "Usuario", codigo: "123456789" },
   { nome: "Raquel", codigo: "diversidade6600" },
   { nome: "Alexandra", codigo: "diversidade6890" },
   { nome: "Ana", codigo: "diversidade5880" },

@@ -1,27 +1,23 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import emailjs from "@emailjs/browser";
+import { jsPDF } from "jspdf";
+import modeloCertificado from "../../assets/certificado.png"; 
 
 import { modulos } from "../../components/Curso/ListaVideos/ListaVideos";
+import { usuariosAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
 import { StyledCertificado } from "./styled";
 
 import { PiKeyReturnLight } from "react-icons/pi";
 
-// ---------- Configuração do EmailJS ----------
-// Use o mesmo service e public key do Contato, e crie um
-// template novo no painel do EmailJS para o certificado.
+// ---------- Dados fixos do certificado (ajuste aqui) ----------
+const NOME_CURSO = "Treinamento de Diversidade";
 
-const EMAILJS_SERVICE = "raquel_id";
-const EMAILJS_TEMPLATE = "certificado_id";
-const EMAILJS_PUBLIC_KEY = "eeCOFVsYvGBtJAcOR";
 
 // ---------- Mesmas regras de progresso da página do curso ----------
 function carregarProgresso(nome) {
   if (!nome) return [];
   try {
-    return (
-      JSON.parse(localStorage.getItem(`cursoProgresso_${nome}`)) || []
-    );
+    return JSON.parse(localStorage.getItem(`cursoProgresso_${nome}`)) || [];
   } catch {
     return [];
   }
@@ -58,48 +54,165 @@ function cpfValido(cpf) {
   return digito(9) === Number(n[9]) && digito(10) === Number(n[10]);
 }
 
+// ---------- Verificação na lista de autorizados ----------
+// Os 4 últimos dígitos do CPF precisam ser iguais aos 4 últimos
+// caracteres do código de algum usuário da lista.
+function cpfAutorizado(cpf) {
+  const finalCpf = cpf.replace(/\D/g, "").slice(-4);
+  return usuariosAutorizados.some(
+    (usuario) => usuario.codigo.trim().slice(-4) === finalCpf
+  );
+}
+
+// ---------- Geração do PDF ----------
+function carregarImagem(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+}
+
+// Cores do modelo
+const AZUL = [26, 86, 172];
+const VERDE = [122, 185, 99];
+const CINZA = [60, 60, 60];
+
+async function gerarCertificadoPdf({ nome, cpf, data }) {
+  const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+  const largura = doc.internal.pageSize.getWidth(); // 297
+  const altura = doc.internal.pageSize.getHeight(); // 210
+
+  // Fundo: o PNG da pasta assets ocupando a página inteira
+  const fundo = await carregarImagem(modeloCertificado);
+  doc.addImage(fundo, "PNG", 0, 0, largura, altura);
+
+  // Centro da área livre do modelo (alinhado com o título e a assinatura)
+  const centro = 157;
+  const larguraTexto = 150;
+
+  // Subtítulo
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(14);
+  doc.setTextColor(...VERDE);
+  // O jsPDF não conta o espaçamento entre letras ao centralizar,
+  // então a largura é calculada na mão
+  const subtitulo = "DE CONCLUSÃO";
+  const espacamento = 1.5;
+  const larguraSubtitulo =
+    doc.getTextWidth(subtitulo) + espacamento * (subtitulo.length - 1);
+  doc.text(subtitulo, centro - larguraSubtitulo / 2, 51, {
+    charSpace: espacamento,
+  });
+
+  // "Certificamos que"
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(14);
+  doc.setTextColor(...CINZA);
+  doc.text("Certificamos que", centro, 72, { align: "center" });
+
+  // Nome do aluno (diminui a fonte se o nome for muito comprido)
+  const nomeMaiusculo = nome.toUpperCase();
+  let tamanhoNome = 26;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(tamanhoNome);
+  while (doc.getTextWidth(nomeMaiusculo) > larguraTexto && tamanhoNome > 14) {
+    tamanhoNome -= 1;
+    doc.setFontSize(tamanhoNome);
+  }
+  doc.setTextColor(...AZUL);
+  doc.text(nomeMaiusculo, centro, 87, { align: "center" });
+
+  // Texto principal
+ 
+  const texto =
+    `portador(a) do CPF ${cpf}, concluiu com êxito o curso ` +
+    `${NOME_CURSO}, em ${data}.`;
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(13);
+  doc.setTextColor(...CINZA);
+  const linhas = doc.splitTextToSize(texto, larguraTexto);
+  doc.text(linhas, centro, 102, { align: "center", lineHeightFactor: 1.5 });
+
+  const nomeArquivo = `certificado-${nome.trim().replace(/\s+/g, "-").toLowerCase()}.pdf`;
+  doc.save(nomeArquivo);
+}
+
 export default function Certificado() {
   const navigate = useNavigate();
-  const form = useRef();
 
   const logado = sessionStorage.getItem("cursoLogado") === "true";
   const nomeLogin = sessionStorage.getItem("cursoNome") || "";
-  const chaveSolicitado = `certificadoSolicitado_${nomeLogin}`;
+  const chaveDados = `certificadoDados_${nomeLogin}`;
 
-  const [cpf, setCpf] = useState("");
-  const [enviando, setEnviando] = useState(false);
-  const [enviado, setEnviado] = useState(
-    localStorage.getItem(chaveSolicitado) === "true"
-  );
+  // Se o aluno já gerou antes, recupera os dados para baixar de novo
+  const salvo = (() => {
+    try {
+      return JSON.parse(localStorage.getItem(chaveDados));
+    } catch {
+      return null;
+    }
+  })();
+
+  const [nome, setNome] = useState(salvo?.nome || nomeLogin);
+  const [cpf, setCpf] = useState(salvo?.cpf || "");
+  const [gerado, setGerado] = useState(Boolean(salvo));
+  const [gerando, setGerando] = useState(false);
 
   // Só entra quem está logado e concluiu todas as aulas
   if (!logado || !cursoFoiConcluido(nomeLogin)) {
     return <Navigate to="/curso" replace />;
   }
 
-  const dataConclusao = new Date().toLocaleDateString("pt-BR");
+  async function baixar(dados) {
+    setGerando(true);
+    try {
+      await gerarCertificadoPdf(dados);
+      setGerado(true);
+    } catch (error) {
+      console.log(error);
+      alert("Não foi possível gerar o certificado. Tente novamente.");
+    } finally {
+      setGerando(false);
+    }
+  }
 
-  function enviar(e) {
+  function gerar(e) {
     e.preventDefault();
+
+    if (!nome.trim()) {
+      alert("Preencha seu nome completo.");
+      return;
+    }
 
     if (!cpfValido(cpf)) {
       alert("CPF inválido. Confira os números digitados.");
       return;
     }
 
-    setEnviando(true);
+    if (!cpfAutorizado(cpf)) {
+      alert(
+        "CPF não encontrado na lista de participantes. Confira os números ou fale com a organização do curso."
+      );
+      return;
+    }
 
-    emailjs
-      .sendForm(EMAILJS_SERVICE, EMAILJS_TEMPLATE, form.current, EMAILJS_PUBLIC_KEY)
-      .then(() => {
-        localStorage.setItem(chaveSolicitado, "true");
-        setEnviado(true);
-      })
-      .catch((error) => {
-        console.log(error.text);
-        alert("Não foi possível enviar agora. Tente novamente em instantes.");
-      })
-      .finally(() => setEnviando(false));
+    // A data de conclusão fica fixa na primeira vez que o certificado é gerado
+    const dados = {
+      nome: nome.trim(),
+      cpf,
+      data: salvo?.data || new Date().toLocaleDateString("pt-BR"),
+    };
+
+    localStorage.setItem(chaveDados, JSON.stringify(dados));
+    baixar(dados);
+  }
+
+  function baixarNovamente() {
+    const dados = JSON.parse(localStorage.getItem(chaveDados));
+    baixar(dados);
   }
 
   return (
@@ -107,13 +220,21 @@ export default function Certificado() {
       <PiKeyReturnLight id="icone" onClick={() => navigate("/curso")} />
 
       <div id="card">
-        
-
-        {enviado ? (
-          <p id="sucesso">
-            Solicitação enviada! Você receberá seu certificado no e-mail
-            informado.
-          </p>
+        {gerado ? (
+          <>
+            <p id="sucesso">
+              Seu certificado foi gerado! Se o download não começou, clique no
+              botão abaixo.
+            </p>
+            <button
+              id="botao"
+              type="button"
+              onClick={baixarNovamente}
+              disabled={gerando}
+            >
+              {gerando ? "GERANDO..." : "BAIXAR CERTIFICADO"}
+            </button>
+          </>
         ) : (
           <>
             <p id="intro">
@@ -121,13 +242,14 @@ export default function Certificado() {
               como devem aparecer no certificado.
             </p>
 
-            <form ref={form} onSubmit={enviar}>
+            <form onSubmit={gerar}>
               <label>NOME COMPLETO</label>
               <input
                 type="text"
                 name="nome_completo"
                 placeholder="Seu nome completo"
-                defaultValue={nomeLogin}
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
                 required
               />
 
@@ -142,20 +264,8 @@ export default function Certificado() {
                 required
               />
 
-              <label>E-MAIL</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Seu e-mail"
-                required
-              />
-
-              {/* Dados extras que vão junto no e-mail */}
-              <input type="hidden" name="nome_login" value={nomeLogin} />
-              <input type="hidden" name="data_conclusao" value={dataConclusao} />
-
-              <button id="botao" type="submit" disabled={enviando}>
-                {enviando ? "ENVIANDO..." : "SOLICITAR CERTIFICADO"}
+              <button id="botao" type="submit" disabled={gerando}>
+                {gerando ? "GERANDO..." : "GERAR CERTIFICADO"}
               </button>
             </form>
           </>
