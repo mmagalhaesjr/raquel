@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { jsPDF } from "jspdf";
-import modeloCertificado from "../../assets/certificado.png"; 
+import modeloCertificado from "../../assets/certificado.png"; // ajuste o nome do arquivo
 
 import { modulos } from "../../components/Curso/ListaVideos/ListaVideos";
 import { usuariosAutorizados } from "../../components/Curso/ListaLogin/ListaLogin";
@@ -10,7 +9,7 @@ import { StyledCertificado } from "./styled";
 import { PiKeyReturnLight } from "react-icons/pi";
 
 // ---------- Dados fixos do certificado (ajuste aqui) ----------
-const NOME_CURSO = "Treinamento de Diversidade";
+const NOME_CURSO = "Nome do Curso";
 
 
 // ---------- Mesmas regras de progresso da página do curso ----------
@@ -80,6 +79,9 @@ const VERDE = [122, 185, 99];
 const CINZA = [60, 60, 60];
 
 async function gerarCertificadoPdf({ nome, cpf, data }) {
+  // O jsPDF é pesado: carregado só na hora de gerar, em um arquivo separado
+  const { jsPDF } = await import("jspdf");
+
   const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
   const largura = doc.internal.pageSize.getWidth(); // 297
   const altura = doc.internal.pageSize.getHeight(); // 210
@@ -125,10 +127,10 @@ async function gerarCertificadoPdf({ nome, cpf, data }) {
   doc.text(nomeMaiusculo, centro, 87, { align: "center" });
 
   // Texto principal
- 
+  
   const texto =
     `portador(a) do CPF ${cpf}, concluiu com êxito o curso ` +
-    `${NOME_CURSO}, em ${data}.`;
+    `"${NOME_CURSO}", em ${data}.`;
 
   doc.setFont("helvetica", "normal");
   doc.setFontSize(13);
